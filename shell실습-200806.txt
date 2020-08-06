@@ -1,0 +1,1968 @@
+Installing, this may take a few minutes...
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username: jsm
+New password:
+Retype new password:
+passwd: password updated successfully
+Installation successful!
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Welcome to Ubuntu 20.04 LTS (GNU/Linux 4.4.0-18362-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Aug  6 13:14:23 KST 2020
+
+  System load:    0.52      Processes:             7
+  Usage of /home: unknown   Users logged in:       0
+  Memory usage:   39%       IPv4 address for eth0: 10.10.50.96
+  Swap usage:     0%        IPv4 address for eth1: 192.168.56.1
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+This message is shown once once a day. To disable it please create the
+/home/jsm/.hushlogin file.
+jsm@DESKTOP-FUPB9QU:~$ sudo apt update && sudo apt upgrade
+[sudo] password for jsm:
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [157 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [56.4 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [3952 B]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [29.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [7732 B]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [324 B]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [52.2 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [26.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [970 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [2108 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1172 B]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [540 B]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [116 B]
+Get:18 http://archive.ubuntu.com/ubuntu focal/main Translation-en [506 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/main amd64 c-n-f Metadata [29.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [318 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [119 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [8160 B]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [29.2 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [7732 B]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [324 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [149 kB]
+Get:33 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [74.3 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [5060 B]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [11.6 kB]
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [3892 B]
+Get:37 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [480 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [112 B]
+Get:39 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:40 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3096 B]
+Get:41 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [1448 B]
+Get:42 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Get:43 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 17.4 MB in 1min 10s (249 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+103 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following NEW packages will be installed:
+  libllvm10
+The following packages will be upgraded:
+  accountsservice alsa-ucm-conf apparmor apport apt apt-utils base-files bash bind9-dnsutils bind9-host bind9-libs
+  busybox-initramfs busybox-static ca-certificates cloud-init curl dbus dbus-user-session dbus-x11 distro-info-data
+  fwupd fwupd-signed gir1.2-glib-2.0 glib-networking glib-networking-common glib-networking-services initramfs-tools
+  initramfs-tools-bin initramfs-tools-core landscape-common less libaccountsservice0 libapparmor1 libapt-pkg6.0
+  libasound2 libasound2-data libcurl3-gnutls libcurl4 libdbus-1-3 libfwupd2 libfwupdplugin1 libgirepository-1.0-1
+  libgl1-mesa-dri libglapi-mesa libglib2.0-0 libglib2.0-bin libglib2.0-data libglx-mesa0 libgnutls30 libjson-c4
+  libldap-2.4-2 libldap-common libnetplan0 libnss-systemd libpam-systemd libproxy1v5 libpulse0 libpulsedsp
+  libpython3.8 libpython3.8-minimal libpython3.8-stdlib libseccomp2 libsqlite3-0 libssh-4 libsystemd0 libudev1
+  linux-base login mesa-vulkan-drivers netplan.io open-iscsi open-vm-tools openssh-client openssh-server
+  openssh-sftp-server passwd pulseaudio-utils python-apt-common python3-apport python3-apt python3-distupgrade
+  python3-problem-report python3-requests python3-software-properties python3-update-manager python3.8
+  python3.8-minimal snapd software-properties-common sosreport strace systemd systemd-sysv systemd-timesyncd tzdata
+  ubuntu-minimal ubuntu-release-upgrader-core ubuntu-server ubuntu-standard ubuntu-wsl udev update-manager-core wslu
+103 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 86.6 MB of archives.
+After this operation, 89.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 base-files amd64 11ubuntu5.1 [60.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bash amd64 5.0-6ubuntu1.1 [638 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 login amd64 1:4.8.1-1ubuntu5.20.04 [221 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 udev amd64 245.4-4ubuntu3.2 [1363 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libudev1 amd64 245.4-4ubuntu3.2 [78.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 systemd-sysv amd64 245.4-4ubuntu3.2 [10.3 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 systemd-timesyncd amd64 245.4-4ubuntu3.2 [28.0 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnss-systemd amd64 245.4-4ubuntu3.2 [95.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dbus-user-session amd64 1.12.16-2ubuntu2.1 [9428 B]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dbus-x11 amd64 1.12.16-2ubuntu2.1 [22.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dbus amd64 1.12.16-2ubuntu2.1 [151 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdbus-1-3 amd64 1.12.16-2ubuntu2.1 [179 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libapparmor1 amd64 2.13.3-7ubuntu5.1 [34.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-systemd amd64 245.4-4ubuntu3.2 [186 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls30 amd64 3.6.13-2ubuntu1.2 [828 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libseccomp2 amd64 2.4.3-1ubuntu3.20.04.3 [42.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 systemd amd64 245.4-4ubuntu3.2 [3796 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsystemd0 amd64 245.4-4ubuntu3.2 [271 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libapt-pkg6.0 amd64 2.0.2ubuntu0.1 [832 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt amd64 2.0.2ubuntu0.1 [1290 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt-utils amd64 2.0.2ubuntu0.1 [214 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.2-1ubuntu1.2 [364 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.2-1ubuntu1.2 [1620 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.2-1ubuntu1.2 [1665 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.2-1ubuntu1.2 [1896 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.2-1ubuntu1.2 [705 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.2 [549 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 open-iscsi amd64 2.0.874-7.1ubuntu6.1 [283 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 passwd amd64 1:4.8.1-1ubuntu5.20.04 [797 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20190110ubuntu1.1 [145 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 distro-info-data all 0.43ubuntu1.1 [4584 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglib2.0-data all 2.64.3-1~ubuntu20.04.1 [5752 B]
+Get:33 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglib2.0-bin amd64 2.64.3-1~ubuntu20.04.1 [72.9 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglib2.0-0 amd64 2.64.3-1~ubuntu20.04.1 [1284 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgirepository-1.0-1 amd64 1.64.1-1~ubuntu20.04.1 [85.7 kB]
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gir1.2-glib-2.0 amd64 1.64.1-1~ubuntu20.04.1 [134 kB]
+Get:37 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 less amd64 551-1ubuntu0.1 [123 kB]
+Get:38 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjson-c4 amd64 0.13.1+dfsg-7ubuntu0.3 [29.3 kB]
+Get:39 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnetplan0 amd64 0.99-0ubuntu3~20.04.2 [22.7 kB]
+Get:40 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 initramfs-tools all 0.136ubuntu6.2 [9200 B]
+Get:41 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 initramfs-tools-core all 0.136ubuntu6.2 [47.5 kB]
+Get:42 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 busybox-initramfs amd64 1:1.30.1-4ubuntu6.1 [169 kB]
+Get:43 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 initramfs-tools-bin amd64 0.136ubuntu6.2 [13.9 kB]
+Get:44 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-base all 4.5ubuntu3.1 [17.4 kB]
+Get:45 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 netplan.io amd64 0.99-0ubuntu3~20.04.2 [70.9 kB]
+Get:46 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tzdata all 2020a-0ubuntu0.20.04 [293 kB]
+Get:47 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-minimal amd64 1.450.1 [2748 B]
+Get:48 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 accountsservice amd64 0.6.55-0ubuntu12~20.04.1 [61.0 kB]
+Get:49 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libaccountsservice0 amd64 0.6.55-0ubuntu12~20.04.1 [72.4 kB]
+Get:50 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apparmor amd64 2.13.3-7ubuntu5.1 [494 kB]
+Get:51 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-dnsutils amd64 1:9.16.1-0ubuntu2.2 [134 kB]
+Get:52 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-libs amd64 1:9.16.1-0ubuntu2.2 [1115 kB]
+Get:53 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-host amd64 1:9.16.1-0ubuntu2.2 [43.0 kB]
+Get:54 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 busybox-static amd64 1:1.30.1-4ubuntu6.1 [949 kB]
+Get:55 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.1 [51.5 kB]
+Get:56 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.1 [377 kB]
+Get:57 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-client amd64 1:8.2p1-4ubuntu0.1 [672 kB]
+Get:58 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python-apt-common all 2.0.0ubuntu0.20.04.1 [17.4 kB]
+Get:59 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-apt amd64 2.0.0ubuntu0.20.04.1 [154 kB]
+Get:60 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-release-upgrader-core all 1:20.04.23 [23.6 kB]
+Get:61 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distupgrade all 1:20.04.23 [103 kB]
+Get:62 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-update-manager all 1:20.04.10.1 [36.6 kB]
+Get:63 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 update-manager-core all 1:20.04.10.1 [11.2 kB]
+Get:64 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 strace amd64 5.5-3ubuntu1 [380 kB]
+Get:65 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-standard amd64 1.450.1 [2788 B]
+Get:66 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 alsa-ucm-conf all 1.2.2-1ubuntu0.1 [20.9 kB]
+Get:67 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-problem-report all 2.20.11-0ubuntu27.6 [9720 B]
+Get:68 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-apport all 2.20.11-0ubuntu27.6 [84.4 kB]
+Get:69 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apport all 2.20.11-0ubuntu27.6 [128 kB]
+Get:70 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libldap-common all 2.4.49+dfsg-2ubuntu1.3 [17.0 kB]
+Get:71 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libldap-2.4-2 amd64 2.4.49+dfsg-2ubuntu1.3 [155 kB]
+Get:72 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssh-4 amd64 0.9.3-2ubuntu2.1 [170 kB]
+Get:73 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.1 [162 kB]
+Get:74 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.1 [233 kB]
+Get:75 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 fwupd-signed amd64 1.27.1ubuntu2+1.3.11-1~focal1 [26.2 kB]
+Get:76 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfwupd2 amd64 1.3.11-1~focal1 [50.7 kB]
+Get:77 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfwupdplugin1 amd64 1.3.11-1~focal1 [80.1 kB]
+Get:78 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 fwupd amd64 1.3.11-1~focal1 [2091 kB]
+Get:79 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libproxy1v5 amd64 0.4.15-10ubuntu1 [50.4 kB]
+Get:80 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 glib-networking-common all 2.64.2-1ubuntu0.1 [5040 B]
+Get:81 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 glib-networking amd64 2.64.2-1ubuntu0.1 [58.2 kB]
+Get:82 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 glib-networking-services amd64 2.64.2-1ubuntu0.1 [10.6 kB]
+Get:83 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 landscape-common amd64 19.12-0ubuntu4.1 [86.7 kB]
+Get:84 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2 amd64 1.2.2-2.1ubuntu1 [328 kB]
+Get:85 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2-data all 1.2.2-2.1ubuntu1 [19.1 kB]
+Get:86 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl3-gnutls amd64 7.68.0-1ubuntu2.1 [231 kB]
+Get:87 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglx-mesa0 amd64 20.0.8-0ubuntu1~20.04.1 [139 kB]
+Get:88 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgl1-mesa-dri amd64 20.0.8-0ubuntu1~20.04.1 [9458 kB]
+Get:89 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglapi-mesa amd64 20.0.8-0ubuntu1~20.04.1 [27.0 kB]
+Get:90 http://archive.ubuntu.com/ubuntu focal/main amd64 libllvm10 amd64 1:10.0.0-4ubuntu1 [15.3 MB]
+Get:91 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpulsedsp amd64 1:13.99.1-1ubuntu3.5 [21.7 kB]
+Get:92 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 pulseaudio-utils amd64 1:13.99.1-1ubuntu3.5 [55.0 kB]
+Get:93 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpulse0 amd64 1:13.99.1-1ubuntu3.5 [263 kB]
+Get:94 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 mesa-vulkan-drivers amd64 20.0.8-0ubuntu1~20.04.1 [3349 kB]
+Get:95 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-requests all 2.22.0-2ubuntu1 [47.1 kB]
+Get:96 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 software-properties-common all 0.98.9.1 [10.5 kB]
+Get:97 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-software-properties all 0.98.9.1 [25.2 kB]
+Get:98 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 snapd amd64 2.45.1+20.04.2 [27.3 MB]
+Get:99 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 sosreport amd64 3.9.1-1ubuntu0.20.04.2 [169 kB]
+Get:100 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-server amd64 1.450.1 [2664 B]
+Get:101 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wslu all 2.3.6-0ubuntu2~20.04.0 [47.2 kB]
+Get:102 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-wsl amd64 1.450.1 [2468 B]
+Get:103 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cloud-init all 20.2-45-g5f7825e2-0ubuntu1~20.04.1 [416 kB]
+Get:104 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 open-vm-tools amd64 2:11.1.0-2~ubuntu20.04.1 [562 kB]
+Fetched 86.6 MB in 5min 3s (286 kB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../base-files_11ubuntu5.1_amd64.deb ...
+Unpacking base-files (11ubuntu5.1) over (11ubuntu5) ...
+Setting up base-files (11ubuntu5.1) ...
+Installing new version of config file /etc/issue ...
+Installing new version of config file /etc/issue.net ...
+Installing new version of config file /etc/lsb-release ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../bash_5.0-6ubuntu1.1_amd64.deb ...
+Unpacking bash (5.0-6ubuntu1.1) over (5.0-6ubuntu1) ...
+Setting up bash (5.0-6ubuntu1.1) ...
+update-alternatives: using /usr/share/man/man7/bash-builtins.7.gz to provide /usr/share/man/man7/builtins.7.gz (builtins.7.gz) in auto mode
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../login_1%3a4.8.1-1ubuntu5.20.04_amd64.deb ...
+Unpacking login (1:4.8.1-1ubuntu5.20.04) over (1:4.8.1-1ubuntu5) ...
+Setting up login (1:4.8.1-1ubuntu5.20.04) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../udev_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking udev (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Preparing to unpack .../libudev1_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking libudev1:amd64 (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Setting up libudev1:amd64 (245.4-4ubuntu3.2) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../0-systemd-sysv_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking systemd-sysv (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Preparing to unpack .../1-systemd-timesyncd_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking systemd-timesyncd (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Preparing to unpack .../2-libnss-systemd_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking libnss-systemd:amd64 (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Preparing to unpack .../3-dbus-user-session_1.12.16-2ubuntu2.1_amd64.deb ...
+Unpacking dbus-user-session (1.12.16-2ubuntu2.1) over (1.12.16-2ubuntu2) ...
+Preparing to unpack .../4-dbus-x11_1.12.16-2ubuntu2.1_amd64.deb ...
+Unpacking dbus-x11 (1.12.16-2ubuntu2.1) over (1.12.16-2ubuntu2) ...
+Preparing to unpack .../5-dbus_1.12.16-2ubuntu2.1_amd64.deb ...
+Unpacking dbus (1.12.16-2ubuntu2.1) over (1.12.16-2ubuntu2) ...
+Preparing to unpack .../6-libdbus-1-3_1.12.16-2ubuntu2.1_amd64.deb ...
+Unpacking libdbus-1-3:amd64 (1.12.16-2ubuntu2.1) over (1.12.16-2ubuntu2) ...
+Preparing to unpack .../7-libapparmor1_2.13.3-7ubuntu5.1_amd64.deb ...
+Unpacking libapparmor1:amd64 (2.13.3-7ubuntu5.1) over (2.13.3-7ubuntu5) ...
+Preparing to unpack .../8-libpam-systemd_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking libpam-systemd:amd64 (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Preparing to unpack .../9-libgnutls30_3.6.13-2ubuntu1.2_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.6.13-2ubuntu1.2) over (3.6.13-2ubuntu1) ...
+Setting up libgnutls30:amd64 (3.6.13-2ubuntu1.2) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../libseccomp2_2.4.3-1ubuntu3.20.04.3_amd64.deb ...
+Unpacking libseccomp2:amd64 (2.4.3-1ubuntu3.20.04.3) over (2.4.3-1ubuntu1) ...
+Setting up libseccomp2:amd64 (2.4.3-1ubuntu3.20.04.3) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../systemd_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking systemd (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Preparing to unpack .../libsystemd0_245.4-4ubuntu3.2_amd64.deb ...
+Unpacking libsystemd0:amd64 (245.4-4ubuntu3.2) over (245.4-4ubuntu3) ...
+Setting up libsystemd0:amd64 (245.4-4ubuntu3.2) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg6.0_2.0.2ubuntu0.1_amd64.deb ...
+Unpacking libapt-pkg6.0:amd64 (2.0.2ubuntu0.1) over (2.0.2) ...
+Setting up libapt-pkg6.0:amd64 (2.0.2ubuntu0.1) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../apt_2.0.2ubuntu0.1_amd64.deb ...
+Unpacking apt (2.0.2ubuntu0.1) over (2.0.2) ...
+Setting up apt (2.0.2ubuntu0.1) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../0-apt-utils_2.0.2ubuntu0.1_amd64.deb ...
+Unpacking apt-utils (2.0.2ubuntu0.1) over (2.0.2) ...
+Preparing to unpack .../1-python3.8_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking python3.8 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../2-libpython3.8_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking libpython3.8:amd64 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../3-libpython3.8-stdlib_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking libpython3.8-stdlib:amd64 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../4-python3.8-minimal_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking python3.8-minimal (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../5-libpython3.8-minimal_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../6-libsqlite3-0_3.31.1-4ubuntu0.2_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) over (3.31.1-4) ...
+Preparing to unpack .../7-open-iscsi_2.0.874-7.1ubuntu6.1_amd64.deb ...
+Unpacking open-iscsi (2.0.874-7.1ubuntu6.1) over (2.0.874-7.1ubuntu6) ...
+Preparing to unpack .../8-passwd_1%3a4.8.1-1ubuntu5.20.04_amd64.deb ...
+Unpacking passwd (1:4.8.1-1ubuntu5.20.04) over (1:4.8.1-1ubuntu5) ...
+Setting up passwd (1:4.8.1-1ubuntu5.20.04) ...
+(Reading database ... 31836 files and directories currently installed.)
+Preparing to unpack .../00-ca-certificates_20190110ubuntu1.1_all.deb ...
+Unpacking ca-certificates (20190110ubuntu1.1) over (20190110ubuntu1) ...
+Preparing to unpack .../01-distro-info-data_0.43ubuntu1.1_all.deb ...
+Unpacking distro-info-data (0.43ubuntu1.1) over (0.43ubuntu1) ...
+Preparing to unpack .../02-libglib2.0-data_2.64.3-1~ubuntu20.04.1_all.deb ...
+Unpacking libglib2.0-data (2.64.3-1~ubuntu20.04.1) over (2.64.2-1~fakesync1) ...
+Preparing to unpack .../03-libglib2.0-bin_2.64.3-1~ubuntu20.04.1_amd64.deb ...
+Unpacking libglib2.0-bin (2.64.3-1~ubuntu20.04.1) over (2.64.2-1~fakesync1) ...
+Preparing to unpack .../04-libglib2.0-0_2.64.3-1~ubuntu20.04.1_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.64.3-1~ubuntu20.04.1) over (2.64.2-1~fakesync1) ...
+Preparing to unpack .../05-libgirepository-1.0-1_1.64.1-1~ubuntu20.04.1_amd64.deb ...
+Unpacking libgirepository-1.0-1:amd64 (1.64.1-1~ubuntu20.04.1) over (1.64.0-2) ...
+Preparing to unpack .../06-gir1.2-glib-2.0_1.64.1-1~ubuntu20.04.1_amd64.deb ...
+Unpacking gir1.2-glib-2.0:amd64 (1.64.1-1~ubuntu20.04.1) over (1.64.0-2) ...
+Preparing to unpack .../07-less_551-1ubuntu0.1_amd64.deb ...
+Unpacking less (551-1ubuntu0.1) over (551-1) ...
+Preparing to unpack .../08-libjson-c4_0.13.1+dfsg-7ubuntu0.3_amd64.deb ...
+Unpacking libjson-c4:amd64 (0.13.1+dfsg-7ubuntu0.3) over (0.13.1+dfsg-7) ...
+Preparing to unpack .../09-libnetplan0_0.99-0ubuntu3~20.04.2_amd64.deb ...
+Unpacking libnetplan0:amd64 (0.99-0ubuntu3~20.04.2) over (0.99-0ubuntu1) ...
+Preparing to unpack .../10-initramfs-tools_0.136ubuntu6.2_all.deb ...
+Unpacking initramfs-tools (0.136ubuntu6.2) over (0.136ubuntu6) ...
+Preparing to unpack .../11-initramfs-tools-core_0.136ubuntu6.2_all.deb ...
+Unpacking initramfs-tools-core (0.136ubuntu6.2) over (0.136ubuntu6) ...
+Preparing to unpack .../12-busybox-initramfs_1%3a1.30.1-4ubuntu6.1_amd64.deb ...
+Unpacking busybox-initramfs (1:1.30.1-4ubuntu6.1) over (1:1.30.1-4ubuntu6) ...
+Preparing to unpack .../13-initramfs-tools-bin_0.136ubuntu6.2_amd64.deb ...
+Unpacking initramfs-tools-bin (0.136ubuntu6.2) over (0.136ubuntu6) ...
+Preparing to unpack .../14-linux-base_4.5ubuntu3.1_all.deb ...
+Unpacking linux-base (4.5ubuntu3.1) over (4.5ubuntu3) ...
+Preparing to unpack .../15-netplan.io_0.99-0ubuntu3~20.04.2_amd64.deb ...
+Unpacking netplan.io (0.99-0ubuntu3~20.04.2) over (0.99-0ubuntu1) ...
+Preparing to unpack .../16-tzdata_2020a-0ubuntu0.20.04_all.deb ...
+Unpacking tzdata (2020a-0ubuntu0.20.04) over (2019c-3ubuntu1) ...
+Preparing to unpack .../17-ubuntu-minimal_1.450.1_amd64.deb ...
+Unpacking ubuntu-minimal (1.450.1) over (1.450) ...
+Preparing to unpack .../18-accountsservice_0.6.55-0ubuntu12~20.04.1_amd64.deb ...
+Unpacking accountsservice (0.6.55-0ubuntu12~20.04.1) over (0.6.55-0ubuntu11) ...
+Preparing to unpack .../19-libaccountsservice0_0.6.55-0ubuntu12~20.04.1_amd64.deb ...
+Unpacking libaccountsservice0:amd64 (0.6.55-0ubuntu12~20.04.1) over (0.6.55-0ubuntu11) ...
+Preparing to unpack .../20-apparmor_2.13.3-7ubuntu5.1_amd64.deb ...
+Unpacking apparmor (2.13.3-7ubuntu5.1) over (2.13.3-7ubuntu5) ...
+Preparing to unpack .../21-bind9-dnsutils_1%3a9.16.1-0ubuntu2.2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.16.1-0ubuntu2.2) over (1:9.16.1-0ubuntu2) ...
+Preparing to unpack .../22-bind9-libs_1%3a9.16.1-0ubuntu2.2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.16.1-0ubuntu2.2) over (1:9.16.1-0ubuntu2) ...
+Preparing to unpack .../23-bind9-host_1%3a9.16.1-0ubuntu2.2_amd64.deb ...
+Unpacking bind9-host (1:9.16.1-0ubuntu2.2) over (1:9.16.1-0ubuntu2) ...
+Preparing to unpack .../24-busybox-static_1%3a1.30.1-4ubuntu6.1_amd64.deb ...
+Unpacking busybox-static (1:1.30.1-4ubuntu6.1) over (1:1.30.1-4ubuntu6) ...
+Preparing to unpack .../25-openssh-sftp-server_1%3a8.2p1-4ubuntu0.1_amd64.deb ...
+Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.1) over (1:8.2p1-4) ...
+Preparing to unpack .../26-openssh-server_1%3a8.2p1-4ubuntu0.1_amd64.deb ...
+Unpacking openssh-server (1:8.2p1-4ubuntu0.1) over (1:8.2p1-4) ...
+Preparing to unpack .../27-openssh-client_1%3a8.2p1-4ubuntu0.1_amd64.deb ...
+Unpacking openssh-client (1:8.2p1-4ubuntu0.1) over (1:8.2p1-4) ...
+Preparing to unpack .../28-python-apt-common_2.0.0ubuntu0.20.04.1_all.deb ...
+Unpacking python-apt-common (2.0.0ubuntu0.20.04.1) over (2.0.0) ...
+Preparing to unpack .../29-python3-apt_2.0.0ubuntu0.20.04.1_amd64.deb ...
+Unpacking python3-apt (2.0.0ubuntu0.20.04.1) over (2.0.0) ...
+Preparing to unpack .../30-ubuntu-release-upgrader-core_1%3a20.04.23_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:20.04.23) over (1:20.04.18) ...
+Preparing to unpack .../31-python3-distupgrade_1%3a20.04.23_all.deb ...
+Unpacking python3-distupgrade (1:20.04.23) over (1:20.04.18) ...
+Preparing to unpack .../32-python3-update-manager_1%3a20.04.10.1_all.deb ...
+Unpacking python3-update-manager (1:20.04.10.1) over (1:20.04.9) ...
+Preparing to unpack .../33-update-manager-core_1%3a20.04.10.1_all.deb ...
+Unpacking update-manager-core (1:20.04.10.1) over (1:20.04.9) ...
+Preparing to unpack .../34-strace_5.5-3ubuntu1_amd64.deb ...
+Unpacking strace (5.5-3ubuntu1) over (4.26-0.2ubuntu3) ...
+Preparing to unpack .../35-ubuntu-standard_1.450.1_amd64.deb ...
+Unpacking ubuntu-standard (1.450.1) over (1.450) ...
+Preparing to unpack .../36-alsa-ucm-conf_1.2.2-1ubuntu0.1_all.deb ...
+Unpacking alsa-ucm-conf (1.2.2-1ubuntu0.1) over (1.2.2-1) ...
+Preparing to unpack .../37-python3-problem-report_2.20.11-0ubuntu27.6_all.deb ...
+Unpacking python3-problem-report (2.20.11-0ubuntu27.6) over (2.20.11-0ubuntu27) ...
+Preparing to unpack .../38-python3-apport_2.20.11-0ubuntu27.6_all.deb ...
+Unpacking python3-apport (2.20.11-0ubuntu27.6) over (2.20.11-0ubuntu27) ...
+Preparing to unpack .../39-apport_2.20.11-0ubuntu27.6_all.deb ...
+invoke-rc.d: could not determine current runlevel
+ * Stopping automatic crash report generation: apport                                                                                                        /etc/init.d/apport: 73: cannot create /proc/sys/fs/suid_dumpable: Operation not permitted
+                                                                                                                                                      [ OK ]
+Unpacking apport (2.20.11-0ubuntu27.6) over (2.20.11-0ubuntu27) ...
+Preparing to unpack .../40-libldap-common_2.4.49+dfsg-2ubuntu1.3_all.deb ...
+Unpacking libldap-common (2.4.49+dfsg-2ubuntu1.3) over (2.4.49+dfsg-2ubuntu1) ...
+Preparing to unpack .../41-libldap-2.4-2_2.4.49+dfsg-2ubuntu1.3_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.3) over (2.4.49+dfsg-2ubuntu1) ...
+Preparing to unpack .../42-libssh-4_0.9.3-2ubuntu2.1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.3-2ubuntu2.1) over (0.9.3-2ubuntu2) ...
+Preparing to unpack .../43-curl_7.68.0-1ubuntu2.1_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.1) over (7.68.0-1ubuntu2) ...
+Preparing to unpack .../44-libcurl4_7.68.0-1ubuntu2.1_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.1) over (7.68.0-1ubuntu2) ...
+Preparing to unpack .../45-fwupd-signed_1.27.1ubuntu2+1.3.11-1~focal1_amd64.deb ...
+Unpacking fwupd-signed (1.27.1ubuntu2+1.3.11-1~focal1) over (1.27+1.3.9-4) ...
+Preparing to unpack .../46-libfwupd2_1.3.11-1~focal1_amd64.deb ...
+Unpacking libfwupd2:amd64 (1.3.11-1~focal1) over (1.3.9-4) ...
+Preparing to unpack .../47-libfwupdplugin1_1.3.11-1~focal1_amd64.deb ...
+Unpacking libfwupdplugin1:amd64 (1.3.11-1~focal1) over (1.3.9-4) ...
+Preparing to unpack .../48-fwupd_1.3.11-1~focal1_amd64.deb ...
+Unpacking fwupd (1.3.11-1~focal1) over (1.3.9-4) ...
+Preparing to unpack .../49-libproxy1v5_0.4.15-10ubuntu1_amd64.deb ...
+Unpacking libproxy1v5:amd64 (0.4.15-10ubuntu1) over (0.4.15-10) ...
+Preparing to unpack .../50-glib-networking-common_2.64.2-1ubuntu0.1_all.deb ...
+Unpacking glib-networking-common (2.64.2-1ubuntu0.1) over (2.64.1-1) ...
+Preparing to unpack .../51-glib-networking_2.64.2-1ubuntu0.1_amd64.deb ...
+Unpacking glib-networking:amd64 (2.64.2-1ubuntu0.1) over (2.64.1-1) ...
+Preparing to unpack .../52-glib-networking-services_2.64.2-1ubuntu0.1_amd64.deb ...
+Unpacking glib-networking-services (2.64.2-1ubuntu0.1) over (2.64.1-1) ...
+Preparing to unpack .../53-landscape-common_19.12-0ubuntu4.1_amd64.deb ...
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 4.4.0-18362-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+104 updates can be installed immediately.
+42 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Unpacking landscape-common (19.12-0ubuntu4.1) over (19.12-0ubuntu4) ...
+Preparing to unpack .../54-libasound2_1.2.2-2.1ubuntu1_amd64.deb ...
+Unpacking libasound2:amd64 (1.2.2-2.1ubuntu1) over (1.2.2-2.1) ...
+Preparing to unpack .../55-libasound2-data_1.2.2-2.1ubuntu1_all.deb ...
+Unpacking libasound2-data (1.2.2-2.1ubuntu1) over (1.2.2-2.1) ...
+Preparing to unpack .../56-libcurl3-gnutls_7.68.0-1ubuntu2.1_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.68.0-1ubuntu2.1) over (7.68.0-1ubuntu2) ...
+Preparing to unpack .../57-libglx-mesa0_20.0.8-0ubuntu1~20.04.1_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (20.0.8-0ubuntu1~20.04.1) over (20.0.4-2ubuntu1) ...
+Preparing to unpack .../58-libgl1-mesa-dri_20.0.8-0ubuntu1~20.04.1_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (20.0.8-0ubuntu1~20.04.1) over (20.0.4-2ubuntu1) ...
+Preparing to unpack .../59-libglapi-mesa_20.0.8-0ubuntu1~20.04.1_amd64.deb ...
+Unpacking libglapi-mesa:amd64 (20.0.8-0ubuntu1~20.04.1) over (20.0.4-2ubuntu1) ...
+Selecting previously unselected package libllvm10:amd64.
+Preparing to unpack .../60-libllvm10_1%3a10.0.0-4ubuntu1_amd64.deb ...
+Unpacking libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Preparing to unpack .../61-libpulsedsp_1%3a13.99.1-1ubuntu3.5_amd64.deb ...
+Unpacking libpulsedsp:amd64 (1:13.99.1-1ubuntu3.5) over (1:13.99.1-1ubuntu3) ...
+Preparing to unpack .../62-pulseaudio-utils_1%3a13.99.1-1ubuntu3.5_amd64.deb ...
+Unpacking pulseaudio-utils (1:13.99.1-1ubuntu3.5) over (1:13.99.1-1ubuntu3) ...
+Preparing to unpack .../63-libpulse0_1%3a13.99.1-1ubuntu3.5_amd64.deb ...
+Unpacking libpulse0:amd64 (1:13.99.1-1ubuntu3.5) over (1:13.99.1-1ubuntu3) ...
+Preparing to unpack .../64-mesa-vulkan-drivers_20.0.8-0ubuntu1~20.04.1_amd64.deb ...
+Unpacking mesa-vulkan-drivers:amd64 (20.0.8-0ubuntu1~20.04.1) over (20.0.4-2ubuntu1) ...
+Preparing to unpack .../65-python3-requests_2.22.0-2ubuntu1_all.deb ...
+Unpacking python3-requests (2.22.0-2ubuntu1) over (2.22.0-2build1) ...
+Preparing to unpack .../66-software-properties-common_0.98.9.1_all.deb ...
+Unpacking software-properties-common (0.98.9.1) over (0.98.9) ...
+Preparing to unpack .../67-python3-software-properties_0.98.9.1_all.deb ...
+Unpacking python3-software-properties (0.98.9.1) over (0.98.9) ...
+Preparing to unpack .../68-snapd_2.45.1+20.04.2_amd64.deb ...
+Unpacking snapd (2.45.1+20.04.2) over (2.44.3+20.04) ...
+Preparing to unpack .../69-sosreport_3.9.1-1ubuntu0.20.04.2_amd64.deb ...
+Unpacking sosreport (3.9.1-1ubuntu0.20.04.2) over (3.9-1ubuntu2) ...
+Preparing to unpack .../70-ubuntu-server_1.450.1_amd64.deb ...
+Unpacking ubuntu-server (1.450.1) over (1.450) ...
+Preparing to unpack .../71-wslu_2.3.6-0ubuntu2~20.04.0_all.deb ...
+Unpacking wslu (2.3.6-0ubuntu2~20.04.0) over (2.3.6-0ubuntu1) ...
+Preparing to unpack .../72-ubuntu-wsl_1.450.1_amd64.deb ...
+Unpacking ubuntu-wsl (1.450.1) over (1.450) ...
+Preparing to unpack .../73-cloud-init_20.2-45-g5f7825e2-0ubuntu1~20.04.1_all.deb ...
+Unpacking cloud-init (20.2-45-g5f7825e2-0ubuntu1~20.04.1) over (20.1-10-g71af48df-0ubuntu5) ...
+Preparing to unpack .../74-open-vm-tools_2%3a11.1.0-2~ubuntu20.04.1_amd64.deb ...
+Unpacking open-vm-tools (2:11.1.0-2~ubuntu20.04.1) over (2:11.0.5-4) ...
+Setting up libapparmor1:amd64 (2.13.3-7ubuntu5.1) ...
+Setting up libproxy1v5:amd64 (0.4.15-10ubuntu1) ...
+Setting up libpython3.8-minimal:amd64 (3.8.2-1ubuntu1.2) ...
+Setting up apt-utils (2.0.2ubuntu0.1) ...
+Setting up linux-base (4.5ubuntu3.1) ...
+Setting up alsa-ucm-conf (1.2.2-1ubuntu0.1) ...
+Setting up python3-problem-report (2.20.11-0ubuntu27.6) ...
+Setting up libglib2.0-0:amd64 (2.64.3-1~ubuntu20.04.1) ...
+Setting up distro-info-data (0.43ubuntu1.1) ...
+Setting up openssh-client (1:8.2p1-4ubuntu0.1) ...
+Setting up libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) ...
+Setting up libfwupd2:amd64 (1.3.11-1~focal1) ...
+Setting up less (551-1ubuntu0.1) ...
+Setting up libnetplan0:amd64 (0.99-0ubuntu3~20.04.2) ...
+Setting up libldap-common (2.4.49+dfsg-2ubuntu1.3) ...
+Setting up tzdata (2020a-0ubuntu0.20.04) ...
+
+Current default time zone: 'Asia/Seoul'
+Local time is now:      Thu Aug  6 13:22:35 KST 2020.
+Universal Time is now:  Thu Aug  6 04:22:35 UTC 2020.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Setting up libasound2-data (1.2.2-2.1ubuntu1) ...
+Setting up apparmor (2.13.3-7ubuntu5.1) ...
+Installing new version of config file /etc/apparmor.d/abstractions/nameservice ...
+Setting up ca-certificates (20190110ubuntu1.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 1 removed; done.
+Setting up libglib2.0-data (2.64.3-1~ubuntu20.04.1) ...
+Setting up busybox-static (1:1.30.1-4ubuntu6.1) ...
+Setting up strace (5.5-3ubuntu1) ...
+Setting up libdbus-1-3:amd64 (1.12.16-2ubuntu2.1) ...
+Setting up dbus (1.12.16-2ubuntu2.1) ...
+Setting up python3-requests (2.22.0-2ubuntu1) ...
+Setting up udev (245.4-4ubuntu3.2) ...
+invoke-rc.d: could not determine current runlevel
+update-initramfs: deferring update (trigger activated)
+Setting up libfwupdplugin1:amd64 (1.3.11-1~focal1) ...
+Setting up busybox-initramfs (1:1.30.1-4ubuntu6.1) ...
+Setting up libglapi-mesa:amd64 (20.0.8-0ubuntu1~20.04.1) ...
+Setting up libssh-4:amd64 (0.9.3-2ubuntu2.1) ...
+Setting up sosreport (3.9.1-1ubuntu0.20.04.2) ...
+Setting up python-apt-common (2.0.0ubuntu0.20.04.1) ...
+Setting up python3.8-minimal (3.8.2-1ubuntu1.2) ...
+Setting up open-vm-tools (2:11.1.0-2~ubuntu20.04.1) ...
+Installing new version of config file /etc/vmware-tools/tools.conf.example ...
+invoke-rc.d: could not determine current runlevel
+Setting up dbus-x11 (1.12.16-2ubuntu2.1) ...
+Setting up libasound2:amd64 (1.2.2-2.1ubuntu1) ...
+Setting up libgirepository-1.0-1:amd64 (1.64.1-1~ubuntu20.04.1) ...
+Setting up libjson-c4:amd64 (0.13.1+dfsg-7ubuntu0.3) ...
+Setting up libaccountsservice0:amd64 (0.6.55-0ubuntu12~20.04.1) ...
+Setting up glib-networking-common (2.64.2-1ubuntu0.1) ...
+Setting up libpython3.8-stdlib:amd64 (3.8.2-1ubuntu1.2) ...
+Setting up python3.8 (3.8.2-1ubuntu1.2) ...
+Setting up wslu (2.3.6-0ubuntu2~20.04.0) ...
+Setting up fwupd (1.3.11-1~focal1) ...
+/var/lib/dpkg/info/fwupd.postinst: 47: dpkg-vendor: not found
+Setting up accountsservice (0.6.55-0ubuntu12~20.04.1) ...
+Setting up initramfs-tools-bin (0.136ubuntu6.2) ...
+Setting up mesa-vulkan-drivers:amd64 (20.0.8-0ubuntu1~20.04.1) ...
+Setting up glib-networking-services (2.64.2-1ubuntu0.1) ...
+Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.1) ...
+Setting up openssh-server (1:8.2p1-4ubuntu0.1) ...
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:BUOcMiGHOmybTLfPjqfFut98t3jL587TmAmoYe0hcKk root@DESKTOP-FUPB9QU (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:7Prn6nfQkyKqqfqCW11lUpX/Z8uSBqFMT7lLFjnk4sw root@DESKTOP-FUPB9QU (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:l57WhvgVVsiqaEpaEH0+ydKB9FqWZVTsEnqs8k4ivys root@DESKTOP-FUPB9QU (ED25519)
+invoke-rc.d: could not determine current runlevel
+Setting up bind9-libs:amd64 (1:9.16.1-0ubuntu2.2) ...
+Setting up libpulse0:amd64 (1:13.99.1-1ubuntu3.5) ...
+Setting up python3-apt (2.0.0ubuntu0.20.04.1) ...
+Setting up ubuntu-wsl (1.450.1) ...
+Setting up libgl1-mesa-dri:amd64 (20.0.8-0ubuntu1~20.04.1) ...
+Setting up libglib2.0-bin (2.64.3-1~ubuntu20.04.1) ...
+Setting up libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.3) ...
+Setting up fwupd-signed (1.27.1ubuntu2+1.3.11-1~focal1) ...
+Setting up libpulsedsp:amd64 (1:13.99.1-1ubuntu3.5) ...
+Setting up libcurl3-gnutls:amd64 (7.68.0-1ubuntu2.1) ...
+Setting up landscape-common (19.12-0ubuntu4.1) ...
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 4.4.0-18362-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Aug  6 13:23:15 KST 2020
+
+  System load:    0.52      Processes:             12
+  Usage of /home: unknown   Users logged in:       0
+  Memory usage:   41%       IPv4 address for eth0: 10.10.50.96
+  Swap usage:     0%        IPv4 address for eth1: 192.168.56.1
+
+
+104 updates can be installed immediately.
+42 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Setting up open-iscsi (2.0.874-7.1ubuntu6.1) ...
+Installing new version of config file /etc/iscsi/iscsid.conf ...
+grep: /lib/modules-load.d/open-iscsi.conf: No such file or directory
+Setting up python3-apport (2.20.11-0ubuntu27.6) ...
+Setting up python3-software-properties (0.98.9.1) ...
+Setting up libpython3.8:amd64 (3.8.2-1ubuntu1.2) ...
+Setting up pulseaudio-utils (1:13.99.1-1ubuntu3.5) ...
+Setting up gir1.2-glib-2.0:amd64 (1.64.1-1~ubuntu20.04.1) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.1) ...
+Setting up curl (7.68.0-1ubuntu2.1) ...
+Setting up glib-networking:amd64 (2.64.2-1ubuntu0.1) ...
+Setting up initramfs-tools-core (0.136ubuntu6.2) ...
+Setting up bind9-host (1:9.16.1-0ubuntu2.2) ...
+Setting up libglx-mesa0:amd64 (20.0.8-0ubuntu1~20.04.1) ...
+Setting up initramfs-tools (0.136ubuntu6.2) ...
+update-initramfs: deferring update (trigger activated)
+Setting up software-properties-common (0.98.9.1) ...
+Setting up apport (2.20.11-0ubuntu27.6) ...
+invoke-rc.d: could not determine current runlevel
+Setting up ubuntu-server (1.450.1) ...
+Setting up bind9-dnsutils (1:9.16.1-0ubuntu2.2) ...
+Setting up systemd (245.4-4ubuntu3.2) ...
+Initializing machine ID from D-Bus machine ID.
+Setting up python3-distupgrade (1:20.04.23) ...
+Setting up netplan.io (0.99-0ubuntu3~20.04.2) ...
+Setting up systemd-timesyncd (245.4-4ubuntu3.2) ...
+Setting up ubuntu-release-upgrader-core (1:20.04.23) ...
+Installing new version of config file /etc/update-motd.d/91-release-upgrade ...
+Setting up python3-update-manager (1:20.04.10.1) ...
+Setting up snapd (2.45.1+20.04.2) ...
+Installing new version of config file /etc/apparmor.d/usr.lib.snapd.snap-confine.real ...
+error: cannot read the state file: open /var/lib/snapd/state.json: no such file or directory
+Setting up systemd-sysv (245.4-4ubuntu3.2) ...
+Setting up cloud-init (20.2-45-g5f7825e2-0ubuntu1~20.04.1) ...
+Installing new version of config file /etc/cloud/templates/chef_client.rb.tmpl ...
+Installing new version of config file /etc/cloud/templates/hosts.suse.tmpl ...
+Installing new version of config file /etc/cloud/templates/resolv.conf.tmpl ...
+Setting up ubuntu-minimal (1.450.1) ...
+Setting up libnss-systemd:amd64 (245.4-4ubuntu3.2) ...
+Setting up update-manager-core (1:20.04.10.1) ...
+Setting up libpam-systemd:amd64 (245.4-4ubuntu3.2) ...
+Setting up ubuntu-standard (1.450.1) ...
+Setting up dbus-user-session (1.12.16-2ubuntu2.1) ...
+Processing triggers for plymouth-theme-ubuntu-text (0.9.4git20200323-0ubuntu6) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for rsyslog (8.2001.0-1ubuntu1) ...
+invoke-rc.d: could not determine current runlevel
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ca-certificates (20190110ubuntu1.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Processing triggers for initramfs-tools (0.136ubuntu6.2) ...
+jsm@DESKTOP-FUPB9QU:~$ ls -al
+total 8
+drwxr-xr-x 1 jsm  jsm  4096 Aug  6 13:14 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:14 ..
+-rw-r--r-- 1 jsm  jsm   220 Aug  6 13:14 .bash_logout
+-rw-r--r-- 1 jsm  jsm  3771 Aug  6 13:14 .bashrc
+drwxr-xr-x 1 jsm  jsm  4096 Aug  6 13:14 .landscape
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:14 .motd_shown
+-rw-r--r-- 1 jsm  jsm   807 Aug  6 13:14 .profile
+-rw-r--r-- 1 jsm  jsm     0 Aug  6 13:14 .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ mkdir /test
+mkdir: cannot create directory ‘/test’: Permission denied
+jsm@DESKTOP-FUPB9QU:~$ chmod 777 .
+jsm@DESKTOP-FUPB9QU:~$ ls -al
+total 8
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:14 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:14 ..
+-rw-r--r-- 1 jsm  jsm   220 Aug  6 13:14 .bash_logout
+-rw-r--r-- 1 jsm  jsm  3771 Aug  6 13:14 .bashrc
+drwxr-xr-x 1 jsm  jsm  4096 Aug  6 13:14 .landscape
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:14 .motd_shown
+-rw-r--r-- 1 jsm  jsm   807 Aug  6 13:14 .profile
+-rw-r--r-- 1 jsm  jsm     0 Aug  6 13:14 .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ mkdir /test
+mkdir: cannot create directory ‘/test’: Permission denied
+jsm@DESKTOP-FUPB9QU:~$ sudjo mkdir /test
+
+Command 'sudjo' not found, did you mean:
+
+  command 'sudo' from deb sudo (1.8.31-1ubuntu1)
+  command 'sudo' from deb sudo-ldap (1.8.31-1ubuntu1)
+
+Try: sudo apt install <deb name>
+
+jsm@DESKTOP-FUPB9QU:~$ sudo mkdir /test
+jsm@DESKTOP-FUPB9QU:~$ ls -al
+total 8
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:14 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:14 ..
+-rw-r--r-- 1 jsm  jsm   220 Aug  6 13:14 .bash_logout
+-rw-r--r-- 1 jsm  jsm  3771 Aug  6 13:14 .bashrc
+drwxr-xr-x 1 jsm  jsm  4096 Aug  6 13:14 .landscape
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:14 .motd_shown
+-rw-r--r-- 1 jsm  jsm   807 Aug  6 13:14 .profile
+-rw-r--r-- 1 jsm  jsm     0 Aug  6 13:14 .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ ls -a
+.  ..  .bash_logout  .bashrc  .landscape  .motd_shown  .profile  .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ sudo mkdir /test
+mkdir: cannot create directory ‘/test’: File exists
+jsm@DESKTOP-FUPB9QU:~$ cd /test
+jsm@DESKTOP-FUPB9QU:/test$ pwd
+/test
+jsm@DESKTOP-FUPB9QU:/test$ cd ~
+jsm@DESKTOP-FUPB9QU:~$ redir /test
+
+Command 'redir' not found, but can be installed with:
+
+sudo apt install redir
+
+jsm@DESKTOP-FUPB9QU:~$ rmdir /test
+rmdir: failed to remove '/test': Permission denied
+jsm@DESKTOP-FUPB9QU:~$ sudo rmdir /test
+jsm@DESKTOP-FUPB9QU:~$ cd /test
+-bash: cd: /test: No such file or directory
+jsm@DESKTOP-FUPB9QU:~$ cd /user
+-bash: cd: /user: No such file or directory
+jsm@DESKTOP-FUPB9QU:~$ pwd
+/home/jsm
+jsm@DESKTOP-FUPB9QU:~$ sudo mkdir /test
+jsm@DESKTOP-FUPB9QU:~$ cd /test
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+jsm@DESKTOP-FUPB9QU:/test$ mkdir -p sub1/sub2/sub3
+mkdir: cannot create directory ‘sub1’: Permission denied
+jsm@DESKTOP-FUPB9QU:/test$ chmod 777 /test
+chmod: changing permissions of '/test': Operation not permitted
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+jsm@DESKTOP-FUPB9QU:/test$ sudo mkdir -p wub1/sub2/sub3
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 wub1
+jsm@DESKTOP-FUPB9QU:/test$ rmdir sub3
+rmdir: failed to remove 'sub3': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ sudo rmdir sub3
+rmdir: failed to remove 'sub3': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ sudo rmdir wub1
+rmdir: failed to remove 'wub1': Directory not empty
+jsm@DESKTOP-FUPB9QU:/test$ sudo rmdir sub2
+rmdir: failed to remove 'sub2': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ rm sub3
+rm: cannot remove 'sub3': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ sudo rm sub3
+rm: cannot remove 'sub3': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ sudo rm sub2
+rm: cannot remove 'sub2': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ sudo rm wub1
+rm: cannot remove 'wub1': Is a directory
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 wub1
+jsm@DESKTOP-FUPB9QU:/test$ rmdir wub1
+rmdir: failed to remove 'wub1': Permission denied
+jsm@DESKTOP-FUPB9QU:/test$ sudo rmdir wub1
+rmdir: failed to remove 'wub1': Directory not empty
+jsm@DESKTOP-FUPB9QU:/test$ cd /sub2
+-bash: cd: /sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ cd wub1
+jsm@DESKTOP-FUPB9QU:/test/wub1$ cd /sub2
+-bash: cd: /sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ ls -al
+total 0
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 ..
+drwxr-xr-x 1 root root 4096 Aug  6 13:31 sub2
+jsm@DESKTOP-FUPB9QU:/test/wub1$ cd /sub2
+-bash: cd: /sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ sudo rm sub2
+rm: cannot remove 'sub2': Is a directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ rmdir sub2
+rmdir: failed to remove 'sub2': Permission denied
+jsm@DESKTOP-FUPB9QU:/test/wub1$ sudo rmdir sub2
+rmdir: failed to remove 'sub2': Directory not empty
+jsm@DESKTOP-FUPB9QU:/test/wub1$ cd /sub2
+-bash: cd: /sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ sudo cd /sub2
+sudo: cd: command not found
+jsm@DESKTOP-FUPB9QU:/test/wub1$ ls -a
+.  ..  sub2
+jsm@DESKTOP-FUPB9QU:/test/wub1$ rm sub2
+rm: cannot remove 'sub2': Is a directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$
+jsm@DESKTOP-FUPB9QU:/test/wub1$ rmdir sub2
+rmdir: failed to remove 'sub2': Permission denied
+jsm@DESKTOP-FUPB9QU:/test/wub1$ sudo rmdir sub2
+rmdir: failed to remove 'sub2': Directory not empty
+jsm@DESKTOP-FUPB9QU:/test/wub1$ cd /sub2
+-bash: cd: /sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ /sub
+-bash: /sub: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ /sub2
+-bash: /sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1$ cd sub2
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ ls
+sub3
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ rmdir sub3
+rmdir: failed to remove 'sub3': Permission denied
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ sudo rmdir sub3
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ ls
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ cd sub2
+-bash: cd: sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ cd wub1
+-bash: cd: wub1: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ cd /wub1
+-bash: cd: /wub1: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/wub1/sub2$ cd ..
+jsm@DESKTOP-FUPB9QU:/test/wub1$ rmdir sub2
+rmdir: failed to remove 'sub2': Permission denied
+jsm@DESKTOP-FUPB9QU:/test/wub1$ sudo rmdir sub2
+jsm@DESKTOP-FUPB9QU:/test/wub1$ ls
+jsm@DESKTOP-FUPB9QU:/test/wub1$ cd ..
+jsm@DESKTOP-FUPB9QU:/test$ sudo rmdir wub1
+jsm@DESKTOP-FUPB9QU:/test$ ls
+jsm@DESKTOP-FUPB9QU:/test$ chmod 777 .
+chmod: changing permissions of '.': Operation not permitted
+jsm@DESKTOP-FUPB9QU:/test$ sudo chmod 777 .
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:37 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+jsm@DESKTOP-FUPB9QU:/test$ mkdir -p sub1/sub2/sub3
+jsm@DESKTOP-FUPB9QU:/test$ pwd
+/test
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:38 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:38 sub1
+jsm@DESKTOP-FUPB9QU:/test$ cd ~
+jsm@DESKTOP-FUPB9QU:~$ ls -al
+total 8
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:14 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:14 ..
+-rw-r--r-- 1 jsm  jsm   220 Aug  6 13:14 .bash_logout
+-rw-r--r-- 1 jsm  jsm  3771 Aug  6 13:14 .bashrc
+drwxr-xr-x 1 jsm  jsm  4096 Aug  6 13:14 .landscape
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:14 .motd_shown
+-rw-r--r-- 1 jsm  jsm   807 Aug  6 13:14 .profile
+-rw-r--r-- 1 jsm  jsm     0 Aug  6 13:14 .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ chmod 644 .
+jsm@DESKTOP-FUPB9QU:~$ ls -al
+ls: cannot access '.bash_logout': Permission denied
+ls: cannot access '.bashrc': Permission denied
+ls: cannot access '.landscape': Permission denied
+ls: cannot access '.motd_shown': Permission denied
+ls: cannot access '.profile': Permission denied
+ls: cannot access '.sudo_as_admin_successful': Permission denied
+total 0
+drw-r--r-- 1 jsm  jsm  4096 Aug  6 13:14 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:14 ..
+-????????? ? ?    ?       ?            ? .bash_logout
+-????????? ? ?    ?       ?            ? .bashrc
+d????????? ? ?    ?       ?            ? .landscape
+-????????? ? ?    ?       ?            ? .motd_shown
+-????????? ? ?    ?       ?            ? .profile
+-????????? ? ?    ?       ?            ? .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ chomd 777 .
+
+Command 'chomd' not found, did you mean:
+
+  command 'chmod' from deb coreutils (8.30-3ubuntu2)
+
+Try: sudo apt install <deb name>
+
+jsm@DESKTOP-FUPB9QU:~$ chmod 777 .
+jsm@DESKTOP-FUPB9QU:~$ ls -al
+total 8
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:14 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:14 ..
+-rw-r--r-- 1 jsm  jsm   220 Aug  6 13:14 .bash_logout
+-rw-r--r-- 1 jsm  jsm  3771 Aug  6 13:14 .bashrc
+drwxr-xr-x 1 jsm  jsm  4096 Aug  6 13:14 .landscape
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:14 .motd_shown
+-rw-r--r-- 1 jsm  jsm   807 Aug  6 13:14 .profile
+-rw-r--r-- 1 jsm  jsm     0 Aug  6 13:14 .sudo_as_admin_successful
+jsm@DESKTOP-FUPB9QU:~$ cd /test
+jsm@DESKTOP-FUPB9QU:/test$ cd sub2
+-bash: cd: sub2: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ sub1/sub2
+-bash: sub1/sub2: Is a directory
+jsm@DESKTOP-FUPB9QU:/test$ cd sub1/sub2
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ pwd
+/test/sub1/sub2
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ cd sub3
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2/sub3$ pes
+
+Command 'pes' not found, but there are 16 similar ones.
+
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2/sub3$ pwd
+/test/sub1/sub2/sub3
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2/sub3$ cd ..
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ cd ..
+jsm@DESKTOP-FUPB9QU:/test/sub1$ touch welcome.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ ls -al;
+total 0
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:42 .
+drwxrwxrwx 1 root root 4096 Aug  6 13:38 ..
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:38 sub2
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:42 welcome.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ vi welcome1.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ ls -al
+total 0
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:44 .
+drwxrwxrwx 1 root root 4096 Aug  6 13:38 ..
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:38 sub2
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:42 welcome.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cd /etc
+jsm@DESKTOP-FUPB9QU:/etc$ ls -al
+total 332
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 .
+drwxr-xr-x 1 root root       4096 Aug  6 13:30 ..
+-rw------- 1 root root          0 Apr 23 15:40 .pwd.lock
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 NetworkManager
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 PackageKit
+drwxr-xr-x 1 root root       4096 Apr 23 16:17 X11
+-rw-r--r-- 1 root root       3028 Apr 23 15:40 adduser.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:21 alternatives
+drwxr-xr-x 1 root root       4096 Aug  6 13:22 apparmor
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 apparmor.d
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 apport
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 apt
+-rw-r----- 1 root daemon      144 Nov 13  2018 at.deny
+-rw-r--r-- 1 root root       2319 Feb 25 21:03 bash.bashrc
+-rw-r--r-- 1 root root         45 Jan 26  2020 bash_completion
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 bash_completion.d
+-rw-r--r-- 1 root root        367 Apr 15 04:26 bindresvport.blacklist
+drwxr-xr-x 1 root root       4096 Apr 22 18:04 binfmt.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 byobu
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 ca-certificates
+-rw-r--r-- 1 root root       5714 Aug  6 13:22 ca-certificates.conf
+-rw-r--r-- 1 root root       5713 Apr 23 15:40 ca-certificates.conf.dpkg-old
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 calendar
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 cloud
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 console-setup
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 cron.d
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 cron.daily
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 cron.hourly
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 cron.monthly
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 cron.weekly
+-rw-r--r-- 1 root root       1042 Feb 14 05:44 crontab
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 cryptsetup-initramfs
+-rw-r--r-- 1 root root         54 Apr 23 15:41 crypttab
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 dbus-1
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 dconf
+-rw-r--r-- 1 root root       2969 Aug  3  2019 debconf.conf
+-rw-r--r-- 1 root root         13 Dec  5  2019 debian_version
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 default
+-rw-r--r-- 1 root root        604 Sep 16  2018 deluser.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 depmod.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 dhcp
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 dpkg
+-rw-r--r-- 1 root root        685 Feb 14 15:08 e2scrub.conf
+-rw-r--r-- 1 root root         31 Apr 23 15:43 ec2_version
+-rw-r--r-- 1 root root         96 Apr 23 15:40 environment
+-rw-r--r-- 1 root root       1816 Dec 27  2019 ethertypes
+drwxr-xr-x 1 root root       4096 Apr 23 16:17 fonts
+-rw-r--r-- 1 root root         43 Apr 23 15:43 fstab
+-rw-r--r-- 1 root root        280 Jun 20  2014 fuse.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 fwupd
+-rw-r--r-- 1 root root       2584 Feb  1  2020 gai.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 groff
+-rw-r--r-- 1 root root        778 Aug  6 13:14 group
+-rw-r--r-- 1 root root        747 Aug  6 13:14 group-
+-rw-r----- 1 root shadow      648 Aug  6 13:14 gshadow
+-rw-r----- 1 root shadow      617 Aug  6 13:14 gshadow-
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 gss
+-rw-r--r-- 1 root root       5060 Aug 21  2019 hdparm.conf
+-rw-r--r-- 1 root root         92 Dec  5  2019 host.conf
+-rw-r--r-- 1 root root         16 Aug  6 13:14 hostname
+-rw-r--r-- 1 root root        424 Aug  6 13:14 hosts
+-rw-r--r-- 1 root root        411 Apr 23 15:42 hosts.allow
+-rw-r--r-- 1 root root        711 Apr 23 15:42 hosts.deny
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 init.d
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 initramfs-tools
+-rw-r--r-- 1 root root       1748 Feb 25 20:48 inputrc
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 iproute2
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 iscsi
+-rw-r--r-- 1 root root         26 Jul 15 17:59 issue
+-rw-r--r-- 1 root root         19 Jul 15 17:59 issue.net
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 kernel
+-rw-r--r-- 1 root root        110 Apr 23 15:41 kernel-img.conf
+drwxrwxr-x 1 root landscape  4096 Apr 15 00:07 landscape
+-rw-r--r-- 1 root root      27590 Aug  6 13:23 ld.so.cache
+-rw-r--r-- 1 root root         34 Apr 15 04:26 ld.so.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 ld.so.conf.d
+drwxr-xr-x 1 root root       4096 Aug  6 13:22 ldap
+-rw-r--r-- 1 root root        267 Dec  5  2019 legal
+-rw-r--r-- 1 root root        191 Feb 18 18:42 libaudit.conf
+-rw-r--r-- 1 root root       2996 Apr 15 04:26 locale.alias
+-rw-r--r-- 1 root root       9440 Apr 23 15:43 locale.gen
+lrwxrwxrwx 1 root root         30 Aug  6 13:22 localtime -> /usr/share/zoneinfo/Asia/Seoul
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 logcheck
+-rw-r--r-- 1 root root      10550 Feb  8 00:32 login.defs
+-rw-r--r-- 1 root root        533 Jan 21  2019 logrotate.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 logrotate.d
+-rw-r--r-- 1 root root        104 Jul 15 17:59 lsb-release
+-rw-r--r-- 1 root root      14867 Feb  1  2019 ltrace.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 lvm
+-r--r--r-- 1 root root         33 Aug  6 13:23 machine-id
+-rw-r--r-- 1 root root        111 Jan 17  2020 magic
+-rw-r--r-- 1 root root        111 Jan 17  2020 magic.mime
+-rw-r--r-- 1 root root       3623 Aug  6 13:23 mailcap
+-rw-r--r-- 1 root root        449 Oct 19  2019 mailcap.order
+-rw-r--r-- 1 root root       5215 Feb 26 02:13 manpath.config
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 mdadm
+-rw-r--r-- 1 root root      24546 Oct 19  2019 mime.types
+-rw-r--r-- 1 root root        808 Feb 14 15:08 mke2fs.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 modprobe.d
+-rw-r--r-- 1 root root        195 Apr 23 15:40 modules
+drwxr-xr-x 1 root root       4096 Aug  6 13:21 modules-load.d
+lrwxrwxrwx 1 root root         19 Apr 23 15:40 mtab -> ../proc/self/mounts
+-rw-r--r-- 1 root root         41 Apr  6 17:17 multipath.conf
+-rw-r--r-- 1 root root      10037 Feb  7 20:27 nanorc
+drwxr-xr-x 1 root root       4096 Apr 16 16:13 netplan
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 network
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 networkd-dispatcher
+-rw-r--r-- 1 root root         91 Dec  5  2019 networks
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 newt
+-rw-r--r-- 1 root root        510 Apr 23 15:40 nsswitch.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 opt
+lrwxrwxrwx 1 root root         21 Jul 15 17:59 os-release -> ../usr/lib/os-release
+-rw-r--r-- 1 root root       6920 Feb 26 03:08 overlayroot.conf
+-rw-r--r-- 1 root root        112 Apr 23 15:43 overlayroot.local.conf
+-rw-r--r-- 1 root root        552 Dec 18  2019 pam.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 pam.d
+-rw-r--r-- 1 root root       1633 Aug  6 13:14 passwd
+-rw-r--r-- 1 root root       1630 Aug  6 13:14 passwd-
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 perl
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 pki
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 pm
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 polkit-1
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 pollinate
+-rw-r--r-- 1 root root          0 Apr 23 15:43 popularity-contest.conf
+-rw-r--r-- 1 root root        581 Dec  5  2019 profile
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 profile.d
+-rw-r--r-- 1 root root       2932 Apr  2  2013 protocols
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 pulse
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 python3
+drwxr-xr-x 1 root root       4096 Aug  6 13:22 python3.8
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 rc0.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 rc1.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:49 rc2.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:49 rc3.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:49 rc4.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:49 rc5.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:43 rc6.d
+drwxr-xr-x 1 root root       4096 Apr 23 16:17 rcS.d
+-rw-r--r-- 1 root root        185 Aug  6 13:14 resolv.conf
+lrwxrwxrwx 1 root root         13 Mar 15 05:24 rmt -> /usr/sbin/rmt
+-rw-r--r-- 1 root root        887 Apr  2  2013 rpc
+-rw-r--r-- 1 root root       1382 Feb 12 00:22 rsyslog.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 rsyslog.d
+-rw-r--r-- 1 root root       3663 Jun 20  2016 screenrc
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 security
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 selinux
+drwxr-xr-x 1 root root       4096 Apr 23 16:17 sensors.d
+-rw-r--r-- 1 root root      10593 Nov  7  2019 sensors3.conf
+-rw-r--r-- 1 root root      14464 Feb 17 08:20 services
+-rw-r----- 1 root shadow      972 Aug  6 13:14 shadow
+-rw-r----- 1 root shadow      842 Apr 23 15:43 shadow-
+-rw-r--r-- 1 root root        146 Apr 23 15:42 shells
+drwxr-xr-x 1 root root       4096 Aug  6 13:21 skel
+-rw-r--r-- 1 root root        138 Feb 15 05:35 sos.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 ssh
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 ssl
+-rw-r--r-- 1 root root         17 Aug  6 13:14 subgid
+-rw-r--r-- 1 root root          0 Apr 23 15:40 subgid-
+-rw-r--r-- 1 root root         17 Aug  6 13:14 subuid
+-rw-r--r-- 1 root root          0 Apr 23 15:40 subuid-
+-r--r----- 1 root root        755 Feb  3  2020 sudoers
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 sudoers.d
+-rw-r--r-- 1 root root       2351 Feb 14 07:44 sysctl.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:21 sysctl.d
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 systemd
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 terminfo
+-rw-r--r-- 1 root root         11 Aug  6 13:22 timezone
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 tmpfiles.d
+drwxr-xr-x 1 root root       4096 Apr 23 15:41 ubuntu-advantage
+-rw-r--r-- 1 root root       1260 Dec 14  2018 ucf.conf
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 udev
+drwxr-xr-x 1 root root       4096 Apr 23 15:42 ufw
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 update-manager
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 update-motd.d
+drwxr-xr-x 1 root root       4096 Apr  2 20:25 update-notifier
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 vim
+drwxr-xr-x 1 root root       4096 Aug  6 13:23 vmware-tools
+lrwxrwxrwx 1 root root         23 Apr 23 15:41 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x 1 root root       4096 Apr 23 16:17 vulkan
+-rw-r--r-- 1 root root       4942 Jul 25  2019 wgetrc
+-rw-r--r-- 1 root root        642 Sep 24  2019 xattr.conf
+drwxr-xr-x 1 root root       4096 Apr 23 15:40 xdg
+-rw-r--r-- 1 root root        477 Oct  8  2019 zsh_command_not_found
+jsm@DESKTOP-FUPB9QU:/etc$ cd /test
+jsm@DESKTOP-FUPB9QU:/test$ cp /etc/hosts ./
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:46 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+-rw-r--r-- 1 jsm  jsm   424 Aug  6 13:46 hosts
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:44 sub1
+jsm@DESKTOP-FUPB9QU:/test$ touch /tmp/mvtest.txt
+jsm@DESKTOP-FUPB9QU:/test$ ls /tmp -al
+total 0
+drwxrwxrwt 1 root root 4096 Aug  6 13:48 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:48 mvtest.txt
+jsm@DESKTOP-FUPB9QU:/test$ mv tmp/mvtest /test
+mv: cannot stat 'tmp/mvtest': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ mv tmp/mvtet.txt /test
+mv: cannot stat 'tmp/mvtet.txt': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ mv tmp/mvtest.txt /test
+mv: cannot stat 'tmp/mvtest.txt': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ mv /tmp/mvtest.txt /test
+jsm@DESKTOP-FUPB9QU:/test$ ls /tmp -al
+total 0
+drwxrwxrwt 1 root root 4096 Aug  6 13:49 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:49 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+-rw-r--r-- 1 jsm  jsm   424 Aug  6 13:46 hosts
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:48 mvtest.txt
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:44 sub1
+jsm@DESKTOP-FUPB9QU:/test$ mv /test/mvtest.txt /test/mv.text
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:51 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+-rw-r--r-- 1 jsm  jsm   424 Aug  6 13:46 hosts
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:48 mv.text
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:44 sub1
+jsm@DESKTOP-FUPB9QU:/test$ cp /test/mv.txt /test/mvtest.txt
+cp: cannot stat '/test/mv.txt': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ cp /test/mv.text /test/mvtest.txt
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:55 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+-rw-r--r-- 1 jsm  jsm   424 Aug  6 13:46 hosts
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:48 mv.text
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:55 mvtest.txt
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:44 sub1
+jsm@DESKTOP-FUPB9QU:/test$ rm /test/mv*
+jsm@DESKTOP-FUPB9QU:/test$ ls -al
+total 0
+drwxrwxrwx 1 root root 4096 Aug  6 13:55 .
+drwxr-xr-x 1 root root 4096 Aug  6 13:30 ..
+-rw-r--r-- 1 jsm  jsm   424 Aug  6 13:46 hosts
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 13:44 sub1
+jsm@DESKTOP-FUPB9QU:/test$ cp `find /etc -name sendmail.cf` ./
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+cp: missing destination file operand after './'
+Try 'cp --help' for more information.
+jsm@DESKTOP-FUPB9QU:/test$ ls -l
+total 0
+-rw-r--r-- 1 jsm jsm  424 Aug  6 13:46 hosts
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 13:44 sub1
+jsm@DESKTOP-FUPB9QU:/test$ cd sub1
+jsm@DESKTOP-FUPB9QU:/test/sub1$ touch
+touch: missing file operand
+Try 'touch --help' for more information.
+jsm@DESKTOP-FUPB9QU:/test/sub1$ vi
+jsm@DESKTOP-FUPB9QU:/test/sub1$ ls
+sample.txt  sub2  welcome.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cp /sub1/sample.txt sub1/sub2/sample/txt
+cp: cannot stat '/sub1/sample.txt': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cp sub1/sample.txt sub2/sample1.txt
+cp: cannot stat 'sub1/sample.txt': No such file or directory
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cp /test/sub1/sample.txt /test/sub1/sub2/sample1.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cd sub2
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ ls -al
+total 8
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:15 .
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 ..
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 sample1.txt
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 13:38 sub3
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ split -b 10000 sample1.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ ls -al
+total 16
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:15 .
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 ..
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 sample1.txt
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 13:38 sub3
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 xaa
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ split -b 10k sample1.txt sam
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ ls -al
+total 24
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:16 .
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 ..
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:16 samaa
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 sample1.txt
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 13:38 sub3
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 xaa
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ rm samaa
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ ls -al
+total 16
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:16 .
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 ..
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 sample1.txt
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 13:38 sub3
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 xaa
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ split -b 1k sample1.txt sam
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ ls -al
+total 36
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:17 .
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 ..
+-rw-rw-rw- 1 jsm jsm 1024 Aug  6 14:17 samaa
+-rw-rw-rw- 1 jsm jsm 1024 Aug  6 14:17 samab
+-rw-rw-rw- 1 jsm jsm 1024 Aug  6 14:17 samac
+-rw-rw-rw- 1 jsm jsm 1024 Aug  6 14:17 samad
+-rw-rw-rw- 1 jsm jsm 1024 Aug  6 14:17 samae
+-rw-rw-rw- 1 jsm jsm  293 Aug  6 14:17 samaf
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 sample1.txt
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 13:38 sub3
+-rw-rw-rw- 1 jsm jsm 5413 Aug  6 14:15 xaa
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ wc sample1.txt
+ 150  998 5413 sample1.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ wc xaa
+ 150  998 5413 xaa
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ wc samae
+  32  185 1024 samae
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ wc samad
+  27  177 1024 samad
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ wc samaf
+  9  54 293 samaf
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ id
+uid=1000(jsm) gid=1000(jsm) groups=1000(jsm),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),117(netdev)
+jsm@DESKTOP-FUPB9QU:/test/sub1/sub2$ cd ..
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cd ~
+jsm@DESKTOP-FUPB9QU:~$ ls dir
+ls: cannot access 'dir': No such file or directory
+jsm@DESKTOP-FUPB9QU:~$ ls dir -al
+ls: cannot access 'dir': No such file or directory
+jsm@DESKTOP-FUPB9QU:~$ ls --h
+ls: option '--h' is ambiguous; possibilities: '--human-readable' '--hide-control-chars' '--hide' '--hyperlink' '--help'
+Try 'ls --help' for more information.
+jsm@DESKTOP-FUPB9QU:~$ ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by modification time, newest first
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report ls translation bugs to <https://translationproject.org/team/>
+Full documentation at: <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+jsm@DESKTOP-FUPB9QU:~$ ls -d
+.
+jsm@DESKTOP-FUPB9QU:~$ cd ..
+jsm@DESKTOP-FUPB9QU:/home$ ls -d
+.
+jsm@DESKTOP-FUPB9QU:/home$ cd ..
+jsm@DESKTOP-FUPB9QU:/$ ls -d
+.
+jsm@DESKTOP-FUPB9QU:/$ ls -al
+total 580
+drwxr-xr-x  1 root root   4096 Aug  6 13:30 .
+drwxr-xr-x  1 root root   4096 Aug  6 13:30 ..
+lrwxrwxrwx  1 root root      7 Apr 23 15:40 bin -> usr/bin
+drwxr-xr-x  1 root root   4096 Apr 23 15:49 boot
+drwxr-xr-x  1 root root   4096 Aug  6 13:14 dev
+drwxr-xr-x  1 root root   4096 Aug  6 13:23 etc
+drwxr-xr-x  1 root root   4096 Aug  6 13:14 home
+-rwxr-xr-x  1 root root 591344 Jan  1  1970 init
+lrwxrwxrwx  1 root root      7 Apr 23 15:40 lib -> usr/lib
+lrwxrwxrwx  1 root root      9 Apr 23 15:40 lib32 -> usr/lib32
+lrwxrwxrwx  1 root root      9 Apr 23 15:40 lib64 -> usr/lib64
+lrwxrwxrwx  1 root root     10 Apr 23 15:40 libx32 -> usr/libx32
+drwxr-xr-x  1 root root   4096 Apr 23 15:40 media
+drwxr-xr-x  1 root root   4096 Aug  6 13:14 mnt
+drwxr-xr-x  1 root root   4096 Apr 23 15:40 opt
+dr-xr-xr-x  9 root root      0 Aug  6 13:14 proc
+drwx------  1 root root   4096 Apr 23 15:43 root
+drwxr-xr-x  1 root root   4096 Aug  6 13:23 run
+lrwxrwxrwx  1 root root      8 Apr 23 15:40 sbin -> usr/sbin
+drwxr-xr-x  1 root root   4096 Apr 10 23:57 snap
+drwxr-xr-x  1 root root   4096 Apr 23 15:40 srv
+dr-xr-xr-x 12 root root      0 Aug  6 13:14 sys
+drwxrwxrwx  1 root root   4096 Aug  6 13:55 test
+drwxrwxrwt  1 root root   4096 Aug  6 13:49 tmp
+drwxr-xr-x  1 root root   4096 Apr 23 15:41 usr
+drwxr-xr-x  1 root root   4096 Apr 23 15:43 var
+jsm@DESKTOP-FUPB9QU:/$ finger
+
+Command 'finger' not found, but can be installed with:
+
+sudo apt install finger
+
+jsm@DESKTOP-FUPB9QU:/$ cd -
+/home
+jsm@DESKTOP-FUPB9QU:/home$ cd -
+/
+jsm@DESKTOP-FUPB9QU:/$ cd -
+/home
+jsm@DESKTOP-FUPB9QU:/home$ cd /test
+jsm@DESKTOP-FUPB9QU:/test$ finger
+
+Command 'finger' not found, but can be installed with:
+
+sudo apt install finger
+
+jsm@DESKTOP-FUPB9QU:/test$ sudo apt install finger
+[sudo] password for jsm:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  finger
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 16.9 kB of archives.
+After this operation, 51.2 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 finger amd64 0.17-17 [16.9 kB]
+Fetched 16.9 kB in 1s (15.1 kB/s)
+Selecting previously unselected package finger.
+(Reading database ... 31877 files and directories currently installed.)
+Preparing to unpack .../finger_0.17-17_amd64.deb ...
+Unpacking finger (0.17-17) ...
+Setting up finger (0.17-17) ...
+Processing triggers for man-db (2.9.1-1) ...
+jsm@DESKTOP-FUPB9QU:/test$ finger
+No one logged on.
+jsm@DESKTOP-FUPB9QU:/test$ who
+jsm@DESKTOP-FUPB9QU:/test$ w
+ 14:31:28 up  1:17,  0 users,  load average: 0.52, 0.58, 0.59
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+jsm@DESKTOP-FUPB9QU:/test$ df -ht
+df: option requires an argument -- 't'
+Try 'df --help' for more information.
+jsm@DESKTOP-FUPB9QU:/test$ df -hT
+Filesystem     Type   Size  Used Avail Use% Mounted on
+rootfs         lxfs   466G   92G  374G  20% /
+none           tmpfs  466G   92G  374G  20% /dev
+none           tmpfs  466G   92G  374G  20% /run
+none           tmpfs  466G   92G  374G  20% /run/lock
+none           tmpfs  466G   92G  374G  20% /run/shm
+none           tmpfs  466G   92G  374G  20% /run/user
+cgroup         tmpfs  466G   92G  374G  20% /sys/fs/cgroup
+C:\            drvfs  466G   92G  374G  20% /mnt/c
+jsm@DESKTOP-FUPB9QU:/test$ du -sh /home
+12K     /home
+jsm@DESKTOP-FUPB9QU:/test$ du -sh /test
+44K     /test
+
+jsm@DESKTOP-FUPB9QU:/test$ ps
+  PID TTY          TIME CMD
+   45 tty1     00:00:01 bash
+11564 tty1     00:00:00 ps
+jsm@DESKTOP-FUPB9QU:/test$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   8892   308 ?        Ssl  13:14   0:00 /init
+root        44  0.0  0.0   8896   216 tty1     Ss   13:14   0:00 /init
+jsm         45  0.0  0.0  18084  3688 tty1     S    13:14   0:01 -bash
+jsm      11565  0.0  0.0  18648  1892 tty1     R    14:55   0:00 ps aux
+jsm@DESKTOP-FUPB9QU:/test$ kill -l 11565
+-bash: kill: 11565: invalid signal specification
+jsm@DESKTOP-FUPB9QU:/test$ top
+top - 15:05:50 up  1:51,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.4 sy,  0.0 ni, 99.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  16256.1 total,   9253.1 free,   6779.1 used,    224.0 buff/cache
+MiB Swap:  49152.0 total,  49151.5 free,      0.5 used.   9346.4 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    1 root      20   0    8892    308    272 S   0.0   0.0   0:00.04 init
+   44 root      20   0    8896    216    172 S   0.0   0.0   0:00.00 init
+   45 jsm       20   0   18084   3692   3600 S   0.0   0.0   0:01.13 bash
+11566 jsm       20   0   18904   2172   1520 R   0.0   0.0   0:00.00 top
+top - 15:05:56 up  1:51,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.8 us,  0.7 sy,  0.0 ni, 98.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  16256.1 total,   9253.4 free,   6778.7 used,    224.0 buff/cache
+MiB Swap:  49152.0 total,  49151.5 free,      0.5 used.   9346.8 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    1 root      20   0    8892    308    272 S   0.0   0.0   0:00.04 init
+   44 root      20   0    8896    216    172 S   0.0   0.0   0:00.00 init
+   45 jsm       20   0   18084   3692   3600 S   0.0   0.0   0:01.13 bash
+11566 jsm       20   0   18904   2180   1528 R   0.0   0.0   0:00.01 top
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
+jsm@DESKTOP-FUPB9QU:/$ cat ~/.bashrc
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+jsm@DESKTOP-FUPB9QU:/$ cd /test
+jsm@DESKTOP-FUPB9QU:/test$ ls -l
+total 0
+-rw-r--r-- 1 jsm jsm  424 Aug  6 13:46 hosts
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 sub1
+jsm@DESKTOP-FUPB9QU:/test$ cat > country
+korea
+japan
+china
+jsm@DESKTOP-FUPB9QU:/test$ ls -l
+total 0
+-rw-rw-rw- 1 jsm jsm   18 Aug  6 15:21 country
+-rw-r--r-- 1 jsm jsm  424 Aug  6 13:46 hosts
+drwxrwxrwx 1 jsm jsm 4096 Aug  6 14:13 sub1
+jsm@DESKTOP-FUPB9QU:/test$ cat -n country
+     1  korea
+     2  japan
+     3  china
+jsm@DESKTOP-FUPB9QU:/test$ head hosts
+# This file is automatically generated by WSL based on the Windows hosts file:
+# %WINDIR%\System32\drivers\etc\hosts. Modifications to this file will be overwritten.
+127.0.0.1       localhost
+127.0.1.1       DESKTOP-FUPB9QU.localdomain     DESKTOP-FUPB9QU
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+jsm@DESKTOP-FUPB9QU:/test$ head -n hosts
+head: invalid number of lines: ‘hosts’
+jsm@DESKTOP-FUPB9QU:/test$ head -5 hosts
+# This file is automatically generated by WSL based on the Windows hosts file:
+# %WINDIR%\System32\drivers\etc\hosts. Modifications to this file will be overwritten.
+127.0.0.1       localhost
+127.0.1.1       DESKTOP-FUPB9QU.localdomain     DESKTOP-FUPB9QU
+
+jsm@DESKTOP-FUPB9QU:/test$ head -20 hosts
+# This file is automatically generated by WSL based on the Windows hosts file:
+# %WINDIR%\System32\drivers\etc\hosts. Modifications to this file will be overwritten.
+127.0.0.1       localhost
+127.0.1.1       DESKTOP-FUPB9QU.localdomain     DESKTOP-FUPB9QU
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+jsm@DESKTOP-FUPB9QU:/test$ head sample.txt
+head: cannot open 'sample.txt' for reading: No such file or directory
+jsm@DESKTOP-FUPB9QU:/test$ cd sub1
+jsm@DESKTOP-FUPB9QU:/test/sub1$ ls
+sample.txt  sub2  welcome.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ head sample.txt
+this story is rendered all in lowercase so that you can search
+for fred and barney in lowercase, as we usually do. some lines
+mention a name like fred more than once so that you can search
+for repeated words, for example. (don't actually try to read this
+story, which is terribly inane, or you'll be disappointed. we
+promise.)
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - -
+jsm@DESKTOP-FUPB9QU:/test/sub1$ head -20 sample.txt
+this story is rendered all in lowercase so that you can search
+for fred and barney in lowercase, as we usually do. some lines
+mention a name like fred more than once so that you can search
+for repeated words, for example. (don't actually try to read this
+story, which is terribly inane, or you'll be disappointed. we
+promise.)
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+one evening, fred and barney were getting ready to go bowling.
+wilma saw this and said to betty, "you should ask barney to take
+you out to the hard rock cafe for pterodactyl burgers."
+
+betty agreed. "barney and fred never think about us. we should
+make it a double date."
+
+"do you want to bring pebbles and bamm-bamm along?"
+
+jsm@DESKTOP-FUPB9QU:/test/sub1$ tail sample.txt
+
+"barney, is that you?" she asked the phone.
+
+"yep. i mean," said barney, hastily disguising his voice again,
+"hello? hello? i think we have a bad connection. i think i just
+heard someone named barney on the line. but there is no one named
+barney here. no barney at all. put that bowling ball down,
+bamm-bamm!"
+
+end of story
+
+jsm@DESKTOP-FUPB9QU:/test/sub1$ touch color1
+jsm@DESKTOP-FUPB9QU:/test/sub1$ vi color1
+jsm@DESKTOP-FUPB9QU:/test/sub1$
+jsm@DESKTOP-FUPB9QU:/test/sub1$ vi color2
+jsm@DESKTOP-FUPB9QU:/test/sub1$ paste color1 color2
+red
+blue    yellow
+white   green
+        gray
+        black
+jsm@DESKTOP-FUPB9QU:/test/sub1$ paste -d : color1 color2
+red:
+blue:yellow
+white:green
+:gray
+:black
+jsm@DESKTOP-FUPB9QU:/test/sub1$ paste -s -d "|" color1 color2
+red|blue|white|
+|yellow|green|gray|black
+jsm@DESKTOP-FUPB9QU:/test/sub1$ diff color1 color2
+1,4c1,4
+< red
+< blue
+< white
+<
+---
+> yellow
+> green
+> gray
+> black
+jsm@DESKTOP-FUPB9QU:/test/sub1$ vi color
+
+jsm@DESKTOP-FUPB9QU:/test/sub1$ diff color1 color
+1a2
+> green
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat color1
+red
+blue
+white
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat color
+red
+green
+blue
+white
+jsm@DESKTOP-FUPB9QU:/test/sub1$clear
+
+
+
+
+# ------------------------restart------------------------------------------------------------------------------------------------------------------
+
+jsm@DESKTOP-FUPB9QU:/test/sub1$ ls -al
+total 8
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 15:43 .
+drwxrwxrwx 1 root root 4096 Aug  6 15:20 ..
+-rw-rw-rw- 1 jsm  jsm    21 Aug  6 15:43 color
+-rw-rw-rw- 1 jsm  jsm    15 Aug  6 15:43 color1
+-rw-rw-rw- 1 jsm  jsm    24 Aug  6 15:42 color2
+-rw-rw-rw- 1 jsm  jsm  5413 Aug  6 14:13 sample.txt
+drwxrwxrwx 1 jsm  jsm  4096 Aug  6 14:17 sub2
+-rw-rw-rw- 1 jsm  jsm     0 Aug  6 13:42 welcome.txt
+jsm@DESKTOP-FUPB9QU:/test/sub1$ grep red *
+color:red
+color1:red
+sample.txt:this story is rendered all in lowercase so that you can search
+sample.txt:for fred and barney in lowercase, as we usually do. some lines
+sample.txt:mention a name like fred more than once so that you can search
+sample.txt:one evening, fred and barney were getting ready to go bowling.
+sample.txt:betty agreed. "barney and fred never think about us. we should
+sample.txt:so wilma found fred and told him, "hey, fred, you've been going
+sample.txt:"but wilma," said fred, "barney and i need to go tonight. this is
+sample.txt:that wasn't good enough for wilma. "fred flintstone, if you think
+sample.txt:discussion with betty. "i can't say no to you betty. but fred
+sample.txt:"well, this is why fred and i have been practicing all week. but
+sample.txt:you can't tell wilma what's going on, because fred made me
+sample.txt:you and fred can sneak over there."
+sample.txt:"i'll call fred and tell him our plan."
+sample.txt:fred had come up with a plan of his own. with his bowling ball in
+sample.txt:"nothing, nothing, dear," said fred, hurriedly hiding the bowling
+sample.txt:"no problem. i've caught it now," lied fred. "i'll just take it
+sample.txt:"uhm, black?" fred responded, holding the bowling ball behind his
+sample.txt:"fred flintstone, you let me see that mouse this minute!" cried
+sample.txt:the telephone rang. "you get that, wilma," said fred. "i'll be
+sample.txt:wilma answered the phone. "hello?" she asked.
+sample.txt:mister fred flintstone. is mister fred flintstone available to
+sample.txt:at that moment, fred rushed back into the house, having left the
+sample.txt:bowling ball in the car. "it's for you, fred," said wilma.
+sample.txt:"hello," fred said into the phone, not understanding.
+sample.txt:"heya, fred," said barney. "betty and i have figured out what to
+sample.txt:"yes, yes," said fred. wilma stood by, curious about this
+sample.txt:wilma was getting more curious. fred said, "well, that mineral, i
+sample.txt:"but fred," said barney, "it's a bowling ball, not a mineral."
+sample.txt:"fred, where do you keep your bowling ball? is it in the garage?"
+sample.txt:wilma interrupted him. "fred, give me the phone. i'll take care
+sample.txt:she pulled the phone away from fred in time to hear barney say,
+grep: sub2: Is a directory
+jsm@DESKTOP-FUPB9QU:/test/sub1$ grep yellow *
+color2:yellow
+grep: sub2: Is a directory
+jsm@DESKTOP-FUPB9QU:/test/sub1$  
+jsm@DESKTOP-FUPB9QU:/test/sub1$ grep -l /test/*
+grep: /test/sub1: Is a directory
+jsm@DESKTOP-FUPB9QU:/test/sub1$ grep -l /test/sub1/*
+grep: /test/sub1/sub2: Is a directory
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat color
+red
+green
+blue
+white
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort color
+blue
+green
+red
+white
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort -r color
+white
+red
+green
+blue
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort -k3 color
+blue
+green
+red
+white
+jsm@DESKTOP-FUPB9QU:/test/sub1$ vi people
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort -k3 people
+사명대사        45세    010-3333-3333   서울시 도봉구
+박혁거세        34세    010-5555-5555   경기도 부천시
+장희빈          21세    010-7777-7777   서울시 영등포구
+손병희          49세    010-888-8888    강원도 강릉시
+이몽룡          16세    010-9999-9999   경기도 의정부시
+홍경래          28세    011-222-2222    서울시 강남구
+홍길동          19세    018-666-6666    경기도 성남시
+임꺽정          23세    019-444-4444    충남 대전시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort -k2 people
+이몽룡          16세    010-9999-9999   경기도 의정부시
+홍길동          19세    018-666-6666    경기도 성남시
+장희빈          21세    010-7777-7777   서울시 영등포구
+임꺽정          23세    019-444-4444    충남 대전시
+홍경래          28세    011-222-2222    서울시 강남구
+손병희          49세    010-888-8888    강원도 강릉시
+박혁거세        34세    010-5555-5555   경기도 부천시
+사명대사        45세    010-3333-3333   서울시 도봉구
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort -k2 -r people
+사명대사        45세    010-3333-3333   서울시 도봉구
+박혁거세        34세    010-5555-5555   경기도 부천시
+손병희          49세    010-888-8888    강원도 강릉시
+홍경래          28세    011-222-2222    서울시 강남구
+임꺽정          23세    019-444-4444    충남 대전시
+장희빈          21세    010-7777-7777   서울시 영등포구
+홍길동          19세    018-666-6666    경기도 성남시
+이몽룡          16세    010-9999-9999   경기도 의정부시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sort -k2 -r people > people2
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat people2
+사명대사        45세    010-3333-3333   서울시 도봉구
+박혁거세        34세    010-5555-5555   경기도 부천시
+손병희          49세    010-888-8888    강원도 강릉시
+홍경래          28세    011-222-2222    서울시 강남구
+임꺽정          23세    019-444-4444    충남 대전시
+장희빈          21세    010-7777-7777   서울시 영등포구
+홍길동          19세    018-666-6666    경기도 성남시
+이몽룡          16세    010-9999-9999   경기도 의정부시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat people
+홍길동          19세    018-666-6666    경기도 성남시
+홍경래          28세    011-222-2222    서울시 강남구
+장희빈          21세    010-7777-7777   서울시 영등포구
+임꺽정          23세    019-444-4444    충남 대전시
+이몽룡          16세    010-9999-9999   경기도 의정부시
+손병희          49세    010-888-8888    강원도 강릉시
+사명대사        45세    010-3333-3333   서울시 도봉구
+박혁거세        34세    010-5555-5555   경기도 부천시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sed '/011/p' people2		#011 핸드폰 번호 사용자 추출 -n과 사용안하면 내용이 두번씩 출력
+사명대사        45세    010-3333-3333   서울시 도봉구
+박혁거세        34세    010-5555-5555   경기도 부천시
+손병희          49세    010-888-8888    강원도 강릉시
+홍경래          28세    011-222-2222    서울시 강남구
+홍경래          28세    011-222-2222    서울시 강남구
+임꺽정          23세    019-444-4444    충남 대전시
+장희빈          21세    010-7777-7777   서울시 영등포구
+홍길동          19세    018-666-6666    경기도 성남시
+이몽룡          16세    010-9999-9999   경기도 의정부시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sed -n '/011/p' people2		#011 핸드폰 번호 사용자 추출
+홍경래          28세    011-222-2222    서울시 강남구
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sed '5,$d' people		#5라인부터 파일 끝까지 삭제하고 그 이전 라인 출력
+홍길동          19세    018-666-6666    경기도 성남시
+홍경래          28세    011-222-2222    서울시 강남구
+장희빈          21세    010-7777-7777   서울시 영등포구
+임꺽정          23세    019-444-4444    충남 대전시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sed '/서울/d' people2			#서울 제외
+박혁거세        34세    010-5555-5555   경기도 부천시
+손병희          49세    010-888-8888    강원도 강릉시
+임꺽정          23세    019-444-4444    충남 대전시
+홍길동          19세    018-666-6666    경기도 성남시
+이몽룡          16세    010-9999-9999   경기도 의정부시
+jsm@DESKTOP-FUPB9QU:/test/sub1$ awk '{print $1, $3}' people
+홍길동 018-666-6666
+홍경래 011-222-2222
+장희빈 010-7777-7777
+임꺽정 019-444-4444
+이몽룡 010-9999-9999
+손병희 010-888-8888
+사명대사 010-3333-3333
+박혁거세 010-5555-5555
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat sedfile1
+s/세 / /g
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat awkfile1
+$2 > 25 {print $1"씨는 ",$2"세 입니다"}
+jsm@DESKTOP-FUPB9QU:/test/sub1$ cat awkfile2
+BEGIN {
+sum = 0;
+line = 0;
+}
+
+{
+sum += $2;
+line ++;
+}
+
+END {
+average = sum / line;
+print "나이의 평균 : "average"세";
+}
+jsm@DESKTOP-FUPB9QU:/test/sub1$ sed -f sedfile1 people2 | awk -f awkfile2
+나이의 평균 : 29.375세
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
