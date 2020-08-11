@@ -1,0 +1,417 @@
+[root@somin test]# cat -n DeBug
+     1	#!/bin/bash
+     2	
+     3	NUM=3
+     4	File="/etc/passwd"
+     5	
+     6	echo "1. This is test scripts"
+     7	if [ -f $File ];	then
+     8		echo "2. hava a file"
+     9	else
+    10		echo "2. don't have a file"
+    11	fi
+    12	if [ "$NUM" -gt 7 ];	then
+    13		echo "3. ${NUM} is greater than 7"
+    14	else
+    15		echo "3. ${NUM} is less than 7"
+    16	fi
+[root@somin test]# sh DeBug
+1. This is test scripts
+2. hava a file
+3. 3 is less than 7
+[root@somin test]# 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat -n DeBug2
+     1	#!/bin/bash
+     2	 
+     3	File="/etc/passwd"
+     4	
+     5	echo "1. This is test scripts"
+     6	if [ -f $File ];
+     7		echo "2. hava a file"
+     8	else
+     9	    echo "2. don't have a file"
+    10	fi
+    11	if [ "$NUM" -gt 7 ];    then
+    12	    echo "3. ${NUM} is greater than 7"
+    13	else
+    14	   echo "3. ${NUM} is less than 7"
+    15	fi
+    16	
+[root@somin test]# sh DeBug2
+1. This is test scripts
+DeBug2: line 8: syntax error near unexpected token `else'
+DeBug2: line 8: `else'			#문법에 에러가 있는 if문은 실행되지 않음
+[root@somin test]# 
+[root@somin test]# sh -n DeBug2		#-n 소스에 에러가 없다면 메시지 출력되지 않음
+DeBug2: line 8: syntax error near unexpected token `else'
+DeBug2: line 8: `else'
+[root@somin test]# 
+[root@somin test]# sh -v DeBug2		# 에러가 발생한 부분에서 룰력을 멈추고 에러 메시지 출력
+#!/bin/bash
+ 
+File="/etc/passwd"
+
+echo "1. This is test scripts"
+1. This is test scripts
+if [ -f $File ];
+	echo "2. hava a file"
+else
+DeBug2: line 8: syntax error near unexpected token `else'
+DeBug2: line 8: `else'
+[root@somin test]# 
+[root@somin test]# sh -x DeBug2		# 스크립트 파일이 실제로 실행한 문장 출력, 에러 메시지도 출력
++ File=/etc/passwd
++ echo '1. This is test scripts'
+1. This is test scripts
+DeBug2: line 8: syntax error near unexpected token `else'
+DeBug2: line 8: `else'
+[root@somin test]#
+[root@somin test]# sh -vx DeBug2	#일반적으로 -v, -x 옵션을 함께 사용하여 디버깅하는 경우가 많음
+#!/bin/bash
+ 
+File="/etc/passwd"
++ File=/etc/passwd
+
+echo "1. This is test scripts"
++ echo '1. This is test scripts'
+1. This is test scripts
+if [ -f $File ];
+	echo "2. hava a file"
+else
+DeBug2: line 8: syntax error near unexpected token `else'
+DeBug2: line 8: `else'
+[root@somin test]# 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat -n msgbox
+     1	#!/bin/sh
+     2	
+     3	DIALOG=${DIALOG=dialog}
+     4	
+     5	$DIALOG --title "MESSAGE BOX" --clear \
+     6			--msgbox "Hi, this is a simple message box. You can use this to \
+     7			display any message you like. The box will remain until\
+     8			you press the ENTER key." 10 41
+     9	
+    10	case $? in
+    11		0)
+    12			echo "OK";;
+    13		255)
+    14			echo "ESC pressed.";;
+    15	esac
+[root@somin test]# sh msgbox
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat -n infobox
+     1	#! /bin/sh
+     2	DIALOG=${DIALOG=dialog}
+     3	
+     4	left=10
+     5	unit="seconds"
+     6	while test $left != 0
+     7	do
+     8	
+     9	$DIALOG --sleep 1 \
+    10			--title "INFO BOX" \
+    11			--infobox "Hi, this is an inforamation box. It is
+    12	different form a message box: it will
+    13	not pause waiting for input after displaying
+    14	the message. The pause here is only introsuced
+    15	by the sleep command within dialog.
+    16	You have $left $unit to read this..." 10 52
+    17	left=`expr $left - 1`
+    18	test $left = 1 && unit="second"		#test 다음에 나오는 조건을 만족시킬 때 스크립트를 빠져나오라는 의미
+    19	done
+[root@somin test]# 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat -n textbox
+     1	#!/bin/sh
+     2	DIALOG=${DIALOG=dialog}
+
+	#3 /tmp/ 디렉토리 밑에 test$$라는 이름의 임시파일을 스크립트가 시작할 때 만들어 놓음. 마지막 $$ 표시는 스크립트 파일이 실행될 때의 프로세스 ID
+     3	tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+
+	#4 trap은 시그널 핸들러	trap [실행할 명령어] [시그널 번호]
+	#시그널 번호 : 	0 - exit 명령어의 실행으로 빠져 나왔을 경우 즉, 텍스트박스 하단 EXIT버튼 선택하여 정상 종료
+	#				1 - 네트워크 장애 등으로 인하여 터미널 접속이 끊겼을 경우
+	#				2- Ctrl+C 눌러서 스크립트 파일 실행 중 interrupt가 걸렸을 경우
+	#				5 - 기계상의 중단점 명령 등의 다른 프로세스에 의하여 interrupt가 걸렸을 경우
+	#				15 - kill 명령으로 인하여 스크립트의 프로세스가 죽었을 경우
+	#				기타 다른 시그널 번호의 리스트는 'trap -l' 'kill -l' 명령어로 알 수 있음
+     4	trap "rm -f $tempfile" 0 1 2 5 15
+     5	
+     6	cat << EOF > $tempfile
+     7	Hi, this is a text dialog box. It can be sued to display text from a file.
+     8	The file should not contain any 'tab; characters, so you should 'expand'
+     9	the file first if it contains 'tab' characters.
+    10	
+    11	It's like a simple text file viewer, with these keys implemented:
+    12	
+    13	PGDN/SAPCE		-Move down one page
+    14	PGUP/'b'		-Move up on page
+    15	ENTER/DOWN/'j'		-Move down one line
+    16	UP/'k'			-Move up one line
+    17	LEFT/'h'		-Scroll left
+    18	RIGHT/'l'		-Scroll right
+    19	'0'			-Move to beginning of line
+    20	HOME/'g'		-Move to beginning of file
+    21	END/'G'		-Move to end of file
+    22	'/'			-Forward search
+    23	'?'			-Backward search
+    24	'n'			-Repeat last search (forward)
+    25	'N'			-Repeat last search (backward)
+    26	
+    27	
+    28	The following is a sample text file:
+    29	
+    30	
+    31	EOF
+    32	
+	# 33~36  /usr/share/common-licenses/GPL 파일이 있거나 혹은 상위디렉토리에 COPTYING 파일이 있다면 그 내용을 $tempfile에 추가
+    33	TEXT=/usr/share/common-licenses/GPL
+    34	test -f $TEXT || TEXT=../COPYING
+    35	
+    36	cat $TEXT | expand >> $tempfile
+    37	
+    38	$DIALOG --clear --title "TEXT BOX" --textbox "$tempfile" 22 77
+    39	
+    40	case $? in
+    41		0)
+    42			echo "OK";;
+    43		255)
+    44			echo "ESC pressed.";;
+    45	esac
+[root@somin test]# 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat -n inputbox
+     1	#!/bin/sh
+     2	DIALOG=${DIALOG=dialog}
+     3	tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+     4	trap "rm -f $tempfile" 0 1 2 5 15
+     5	
+     6	$DIALOG --title "INPUT BOX" --clear \
+     7			--inputbox "Hi, this is an input dialog box/ You can use \n
+     8	this to ask questions that reauire the user \n
+     9	to input a string as the anser. You can \n
+    10	input strings of length longer than the \n
+    11	width of the input box, in that case, the \n
+    12	input field will be automatically acrolled. \n
+    13	You can use BACKSPACE to correct errors. \n\n
+    14	Try entering our name below:" 16 51 2> $tempfile
+    15	
+    16	retval=$?
+    17	
+    18	case $retval in
+    19		0)
+    20			echo "Input string is `cat $tempfile`";;
+    21		1)
+    22			echo "Cancel pressed.";;
+    23		255)
+    24			if test -s $tempfile ; then
+    25				cat $tempfile
+    26			else
+    27				echo "ESC pressed."
+    28			fi
+    29			;;
+    30	esac
+[root@somin test]# 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat -n passwordbox
+     1	#!/bin/sh
+     2	DIALOG=${DIALOG=dialog}
+     3	tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+     4	trap "rm -f $tempfile" 0 1 2 5 15
+     5	 
+     6	$DIALOG --title "INPUT BOX" --clear \
+     7	        --passwordbox "Hi, this is an password dialog box. You can use \n
+     8	this to ask questions that require the user \n
+     9	to input a string as the answer. You can \n
+    10	input strings of length longer than the \n
+    11	width of the input box, in that case, the \n
+    12	input field will be automatically scrolled. \n
+    13	You can use BACKSPACE to correct errors. \n\n
+    14	Try entering your name beow:" 16 51 2> $tempfile
+    15	
+    16	retval=$?
+    17	
+    18	case $retval in 
+    19		0)
+    20			echo "Input string is `cat $tempfile`";;
+    21		1)
+    22			echo "Cancel pressed.";;
+    23		255)
+    24			if test -s $tempfile ; then
+    25				cat $tempfile
+    26			else
+    27				echo "ESC pressed."
+    28			fi
+    29			;;
+    30	esac
+[root@somin test]# 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat yesno
+#!/bin/sh
+DIALOG=${DIALOG=dialog}
+
+$DIALOG --title "YES/NO BOX" --clear \
+		--yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+					questions that have an answer of either yes or no. \
+					BTW, do you notice that long lines will be automatically \
+					wrapped around so that they can fit in the box? You can \
+					also control line breaking explicitly by inserting \
+					'backslash n' at any place you like, but in this case, \
+					auto wrap around will be disable and you will have to \
+					conrol oine breakng yourslef." 15 61
+
+case $? in
+	0)
+		echo "Yes chosen.";;
+	1)
+		echo "Cancel pressed.";;
+	255)
+		echo "ESC pressed.";;
+esac
+[root@somin test]# 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat menubox
+#!/bin/sh
+DIALOG=${DIALOG=dialog}
+tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+trap "rm -f $tempfile" 0 1 2 5 15
+
+$DIALOG --clear --title "MENU BOX" \
+		--menu "Hi, this is a menu box. You can use this to \n\
+present a list of choices for the user to \n\
+choose. If there are more items than can fit \n\
+on the screen, the menu will be scrolled. \n\
+You can use the UP/DOWN arrow keys, the first \n\
+letter of the choice as a hot key, or the \n\
+number keys 1-9 to choose an option.\n\
+Try it now!\n\n
+		Choose the OS you like:" 20 51 4 \
+		"Linux"		"The Freat Unix Clone for 386/486" \
+		"NetBSD"	"Another free Unix Clone for 386/486" \
+		"OS/2"		"IBM OS/2" \
+		"WIN NT"	"Microsoft windows NT" \
+		"PCDOS"		"IBM PC DOS" \
+		"MSDOS"		"Microsoft DOS" 2> $tempfile
+
+retval=$?
+
+choice=`cat $tempfile`
+
+case $retval in
+	0)
+		echo "'$choice' chosen.";;
+	1)
+		echo "Cancel pressed.";;
+	255)
+		echo "ESC pressed.";;
+esac
+[root@somin test]# 
+-----------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat radiolist
+#!/bin/sh
+DIALOG=${DIALOG=dialog}
+tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+trap "rm -f $tempfile" 0 1 2 5 15
+
+$DIALOG --backtitle "Red Hat Software Linux" \
+		--title "RADIOLIST BOX" --clear \
+		--radiolist "Hi, this is a radiolist box. You can use this to \n\
+		present a list of choices which can be turned on or \n\
+		off. If there are more itmes than can fit on the \n\
+		screan, the list will be scrolled. You can use the \n\
+		UP.DOWN arrow keys, the first letter of the choice as a \n\
+		hot key, or the number keys 1-9 to choose/off. \n\n 
+		Which of the follwing are fruitts?" 20 61 5 \
+			"Apple"		"It's an apple." off \
+			"DOG"		"No, that's not my dog/" ON \
+			"Orange"	"Yeah, that's juicy." off \
+			"Chicken"	"Normally not a pet." off \
+			"Cat"		"No, never put a dog and a cat togehter!" off \
+			"Fish"		"Cats like fish." off \
+			"Lemon"		"You know how it tastes." off 2> $tempfile
+
+retval=$?
+
+choice=`cat $tempfile`
+case $retval in
+	0)
+		echo "'$choice' chosen.";;
+	1)
+		echo "Cancel pressed.";;
+	255)
+		echo "ESC pressed.";;
+esac
+[root@somin test]# 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat checklistbox
+#!/bin/sh
+: ${DIALOG=dialog}
+: ${DIALOG_OK=0}
+: ${DIALOG_CANCEL=1}
+: ${DIALOG_ESC=255}
+tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+trap "rm -f $tempfile" 0 1 2 5 15
+
+$DIALOG --backtitle "Red Hat Software Linux" \
+		--title "CHECKLIST BOX" \
+		--checklist "Hi, this is a checklist box. You can use this to \n\
+	present a list of choices which can be turned on or \n\
+	off. If there are more items than can fit on the \n\
+	screen, the list will be scrolled. You can use the \n\
+	UP/DOWN arrow keys, the first letter of the choice as a \n\
+	hot key, or the number keys 1-9 to choose an option. \n\
+	Press SPACE to toggle an option on/off. \n\n
+		Which of the following are fruits?" 20 61 5 \
+			"Apple"		"It's an apple." off \
+			"DOG"		"No, that's not my dog/" ON \
+			"Orange"	"Yeah, that's juicy." off \
+			"Chicken"	"Normally not a pet." off \
+			"Cat"		"No, never put a dog and a cat togehter!" off \
+			"Fish"		"Cats like fish." off \
+			"Lemon"		"You know how it tastes." off 2> $tempfile
+
+retval=$?
+
+choice=`cat $tempfile`
+case $retval in
+	$DIALOG_OK)
+		echo "'$choice' chosen.";;
+	$DIALOG_CANCEL)
+		echo "Cancel pressed.";;
+	$DIALOG_ESC)
+		echo "ESC pressed.";;
+	*)
+		echo "Unexpected return code: $retval (ok would be $DIALOG_OK)";;
+esac
+[root@somin test]# sh checklistbox
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------오류나거나 실행안되던 것 해결----------------------------------------------------------------------------------------------------
+[root@somin test]# cat expr2
+#!/bin/bash
+
+num=`expr \( 3 \* 5 \) / 4 + 7`
+echo $num
+[root@somin test]# sh expr2
+10
+[root@somin test]# 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+#!/bin/bash
+  2 
+  3 echo "^[[31m안녕하세여^[[0m"				#글자색 코드 :31 - 빨간색	/ 배경색 코드: 0 -기본 화면색
+  4 echo "^[[1m^[[35mSo Hard^[[0m"			#글자색 코드 :35 -보라색 / 밝은 보라:1	/배경색 코드:0 -기본 화면색
+
+
+[root@somin test]# cat ANSI
+#!/bin/bash
+
+echo "안녕하세여"
+echo "So Hard"
+[root@somin test]# sh ANSI
+안녕하세여
+So Hard
+[root@somin test]# 
+
