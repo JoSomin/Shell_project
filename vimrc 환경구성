@@ -1,0 +1,37 @@
+# vi ~/.vimrc
+# jellybeans 파일은 color 설치된 파일에 넣어줘야함
+
+" 구문강조
+  2 if has("syntax")
+  3     syntax on
+  4 endif
+  5 
+  6 set paste       "붙여넣기 계단현상 없애기
+  7 set smartcase   "검색 시 대소문자 구별
+  8 set autoindent      "자동 들여쓰기
+  9 set cindent     "C언어 자동 들여쓰기
+ 10 set wrap
+ 11 highlight Comment ctermfg=LightCyan
+ 12 set shiftwidth=4        "자동 들여쓰기 너비 설정
+ 13 set tabstop=4
+ 14 set incsearch
+ 15 set hlsearch
+ 16 set ruler
+ 17 set autoindent
+ 18 set showmatch
+ 19 set nu
+ 20 set autowrite       "다른 파일로 넘어갈 때 자동 저장
+ 21 set autoread        "작업 중인 파일 외부에서 변경됬을 경우 자동으로 불러옴
+ 22 set history=256
+ 23 set smartcase
+ 24 set laststatus=2
+ 25 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+ 26 colorscheme jellybeans
+ 27 
+ 28 
+ 29 "마지막으로 수정된 곳에 커서 위치
+ 30 au BufReadPost *
+ 31 \ if line("'\"") > 0 && line("'\"") <= line("$") |
+ 32 \ exe "norm g`\"" |
+ 33 \ endif
+
