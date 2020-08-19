@@ -1,0 +1,206 @@
+# 200818
+
+[root@somin test]# cat array
+#!/bin/bash
+declare -a color				"declare 명령어는 변수의 타입이나 특성을 제한 / -a 옵션을 사용하여 다음에 오는 변수를 배열로 인식시킴
+
+color=(blue red yellow pink)
+
+echo ""
+echo "$color[0] $color[1] $color[2]"
+echo "${color[0]} ${color[1]} ${color[2]} ${color[3]}"
+echo "전체 배열값 : ${color[@]}"
+echo "전체 배열값의 갯수 : ${#color[@]}"
+echo ""
+[root@somin test]# sh array
+
+blue[0] blue[1] blue[2]
+blue red yellow pink
+전체 배열값 : blue red yellow pink
+전체 배열값의 갯수 : 4
+
+[root@somin test]# 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat Test
+#!/bin/bash
+echo "\$1 : $1"
+echo "\${1##[-+]} : ${1##[-+]}"
+[root@somin test]# sh Test crond
+$1 : crond
+${1##[-+]} : crond
+"/etc/rc.d/init.d/cornd 스크립트 파일에서 damon 함수를 사용하는 부분이 'daemon cornd'형식으로 사용하고 있으므로 $1 와 ${1##[-+]} 값이 같다
+[root@somin test]# 
+-------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat Test2
+#!/bin/bash
+
+echo ${1##[-+]}				"[-+]는 -,+ 기호를 의미 /  가장 마지막에 나오는 -,+기호 다음의 문자열을 출력
+[root@somin test]# sh Test2 -Red
+Red
+[root@somin test]# sh Test2 Red
+Red
+[root@somin test]# sh Test2 +Red-Blue
+Red-Blue
+[root@somin test]# sh Test2 -+Red-Blue
++Red-Blue	
+		"[-+]기호는 Blue 앞의 -기호가 아니라 첨에 나오는 -기호 / Blue 앞의 -는 -+Red- 앞부분부터 누적해서 인식
+[root@somin test]# 
+---------------------------------------------------------------------------------------------------
+[root@somin test]# cat Test3
+#!/bin/bash
+echo ${1##*[-+]}				
+[root@somin test]# sh Test3 -Red
+Red
+[root@somin test]# sh Test3 +Red
+Red
+[root@somin test]# sh Test3 +Red-Blue
+Blue
+[root@somin test]# sh Test3 -+Red-Blue
+Blue
+[root@somin test]# 
+------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat Test4
+#!/bin/bash
+echo ${1##*/}
+			"앞부분에 와일드카드 문자(*)를 추가하여  argument의 어느 부분에 구분자가 있느냐에 상관없이 구분자를 기준으로 마지막 문자를 가져옴
+[root@somin test]# sh Test4 /etc/rc.d/ini.d/crond
+crond
+[root@somin test]# sh Test4 ../conf/httpd.conf
+httpd.conf
+[root@somin test]# 
+----------------------------------------------------------------------------
+[root@somin test]# cat Test1-4-2
+#!/bin/bash
+echo ${1#--check=}				"구분자를 문자열로 지정해도 #를 사용할 경우 구분자와 매치가 일어나는 가장 처음 패턴을 삭제한 후 출력
+[root@somin test]# sh Test1-4-2 --check=language
+language
+[root@somin test]# cat Test1-4-3
+#!/bin/bash
+echo ${1#--user=}[root@somin test]# sh Test1-4-3 --user=root
+root
+[root@somin test]# 
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+[root@somin test]# cat SHIFT
+#!/bin/bash
+
+while [ "$#" != 0 ];				"띄어쓰기 조심하자 모두다 띄어쓰기!!!!!!!!
+do
+	echo "전체argument 개수 : $#"
+	echo $1
+	shift
+done
+[root@somin test]# sh SHIFT Red Blue Yellow
+전체argument 개수 : 3
+Red
+전체argument 개수 : 2
+Blue
+전체argument 개수 : 1
+Yellow
+[root@somin test]# 
+[root@somin test]# cat SHIFT2
+#!/bin/bash
+
+while [ "$#" != 0 ];
+do
+	echo "전체argument 개수 : $#"
+		echo $1
+			shift 2			"shift를 만나면 왼ㅉ고으로 밀어내기를 하듯 argument 가 옮겨짐
+			done
+[root@somin test]# sh SHIFT2 Red Blue Yellow White Green Pink
+전체argument 개수 : 6
+Red
+전체argument 개수 : 4
+Yellow
+전체argument 개수 : 2
+Green
+[root@somin test]# 
+---------------------------------------------------------------------------------------------------------------
+[root@somin test]# ulimit -Sa						"소프트한도
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 3841
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 3841
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+
+[root@somin test]# ulimit -Ha						"하드한도
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 3841
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 4096
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 3841
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+[root@somin test]# 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
